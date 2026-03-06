@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <canvas #bgCanvas></canvas>
-  <router-outlet></router-outlet>
-</body>
-</html>
+
+<app-background></app-background>
+<app-top-bar></app-top-bar>
+<div style="height: 80px;"></div>
+
+<!-- Sections -->
+<section id="about" class="section" style="height: 900px;">About Section</section>
+<section id="experience" class="section" style="height: 900px;">Experience Section</section>
+<section id="skills" class="section" style="height: 900px;">Skills Section</section>
+<section id="projects" class="section" style="height: 900px;">Projects Section</section>
+<router-outlet></router-outlet>

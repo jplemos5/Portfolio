@@ -1,0 +1,18 @@
+<mat-toolbar class="topbar">
+  <div class="left">
+    <div class="name">João Lemos</div>
+    <div class="role">Software Engineer</div>
+  </div>
+
+  <div class="center">
+    <div class="pill">
+      <button
+        *ngFor="let section of sections; let i = index"
+        (click)="scrollToSection(section.id, i)"
+        [class.active]="activeIndex === i"
+      >
+        {{ section.label }}
+      </button>
+    </div>
+  </div>
+</mat-toolbar>
