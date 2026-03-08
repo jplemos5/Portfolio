@@ -20,37 +20,34 @@ export class TopBar implements AfterViewInit {
   ];
 
   activeIndex = 0;
-  private scrollingToSection = false; // flag to disable mid-scroll updates
+  private scrollingToSection = false;
 
   ngAfterViewInit() {
-    this.onScroll(); // initial active section
+    this.onScroll(); 
   }
 
   scrollToSection(sectionId: string, index: number) {
-    this.activeIndex = index;       // immediately update notch
-    this.scrollingToSection = true; // disable scroll listener
+    this.activeIndex = index;       
+    this.scrollingToSection = true;
 
     const element = document.getElementById(sectionId);
     if (element) {
-      const topOffset = 60; // adjust for fixed topbar height
+      const topOffset = 120; 
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
         top: elementPosition - topOffset,
         behavior: 'smooth'
       });
-
-      // Re-enable scroll listener after scroll duration
       setTimeout(() => {
         this.scrollingToSection = false;
-      }, 500); // slightly longer than CSS scroll duration
+      }, 500); 
     }
   }
 
   @HostListener('window:scroll', [])
   onScroll() {
-    if (this.scrollingToSection) return; // skip mid-scroll updates
-
-    const scrollPos = window.scrollY + window.innerHeight / 2; // center of viewport
+    if (this.scrollingToSection) return;
+    const scrollPos = window.scrollY + window.innerHeight / 2;
     this.sections.forEach((section, index) => {
       const el = document.getElementById(section.id);
       if (el) {
