@@ -18,7 +18,7 @@ export class Experience {
       subtitle: 'Effectum',
       image: 'Effectum.jpg',
       logo: 'Effectum Logo.jpg',
-      text: 'Developed tools to improve workflow and organizational efficiency.',
+      text: 'Developed tools improving workflow and organizational efficiency.',
       fulltext: 'Developed internal tools that significantly improved task organization and workflow efficiency within the accounting team.'
     },
     {
@@ -27,7 +27,7 @@ export class Experience {
       subtitle: 'Université Gustave Eiffel',
       image: 'UGE.jpg',
       logo: 'UGE Logo.jpg',
-      text: 'Worked on projects optimizing traffic flow and movement patterns.',
+      text: 'Worked on projects optimizing traffic flow and patterns.',
       fulltext: 'Participated in international collaborative projects focused on traffic optimization and movement efficiency.'
     },
     {
@@ -63,7 +63,7 @@ export class Experience {
       subtitle: 'Bairro de Ideias',
       image: 'Bairro de Ideias.webp',
       logo: 'BI Logo.jpg',
-      text: 'Helped students and developed a student management application.',
+      text: 'Helped students and developed a management application.',
       fulltext: 'Provided one-to-one teaching support and developed a custom application to manage student information.'
     }
   ];
