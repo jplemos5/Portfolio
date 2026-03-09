@@ -16,8 +16,21 @@
 }
 
 .image-container {
+  overflow: hidden;        /* Esconde o excesso da imagem ao dar zoom */       /* Ajusta ao tamanho que quiser */
   position: relative;
 }
+
+/* Imagem */
+.image-container img {
+  object-fit: cover;       /* Mantém proporção e preenche o container */
+  transition: transform 0.3s ease; /* Animação suave */
+}
+
+/* Zoom ao hover */
+.image-container:hover img {
+  transform: scale(1.15);  /* Aumenta apenas a imagem */
+}
+
 
 /* imagem */
 .card-header-img {
