@@ -1,4 +1,4 @@
-<mat-card class="education-card">
+<mat-card class="education-card" (click)="openDialog()">
   <div class="image-container">
     <img mat-card-image [src]="image" class="card-header-img">
     <div class="card-text-overlay">
@@ -10,6 +10,51 @@
   <mat-card-content class="card-content">
     {{ text }}
   </mat-card-content>
-  <mat-icon class="expand-icon" style="position: absolute; right: 0; bottom: 0; color: limegreen;">info</mat-icon>
+  <mat-icon class="expand-icon"
+    style="position:absolute; right:2px; bottom:2px; color:limegreen;">
+    info
+  </mat-icon>
 </mat-card>
 
+<ng-template #dialogTemplate>
+
+<div class="dialog-card">
+
+  <div class="dialog-image-container">
+
+    <img [src]="currentExperience.image" class="dialog-header-img">
+
+    <div class="dialog-text-overlay">
+      <h2 class="dialog-title">{{ currentExperience.title }}</h2>
+      <h4 class="dialog-subtitle">{{ currentExperience.subtitle }}</h4>
+    </div>
+
+  </div>
+
+  <img [src]="currentExperience.logo" class="dialog-avatar">
+
+  <div class="dialog-body">
+    <p>{{ currentExperience.fulltext }}</p>
+  </div>
+
+  <div class="dialog-footer">
+
+    <button mat-icon-button (click)="previous()" [disabled]="currentIndex === 0">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+
+    <span class="dialog-index">
+      {{currentIndex + 1}} / {{experiences.length}}
+    </span>
+
+    <button mat-icon-button
+            (click)="next()"
+            [disabled]="currentIndex === experiences.length - 1">
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+
+  </div>
+
+</div>
+
+</ng-template>

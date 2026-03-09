@@ -47,6 +47,7 @@ export class TopBar implements AfterViewInit {
   @HostListener('window:scroll', [])
   onScroll() {
     if (this.scrollingToSection) return;
+
     const scrollPos = window.scrollY + window.innerHeight / 2;
     this.sections.forEach((section, index) => {
       const el = document.getElementById(section.id);
