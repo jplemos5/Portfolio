@@ -3,11 +3,11 @@ import { TopBar } from '../top-bar/top-bar';
 import { About } from '../about/about';
 import { HoverService } from '../hover';
 import { Experience } from '../experience/experience';
-
+import { Skills } from '../skills/skills';
 
 @Component({
   selector: 'app-professional-page',
-  imports: [TopBar, About, Experience],
+  imports: [TopBar, About, Experience, Skills],
   templateUrl: './professional-page.html',
   styleUrl: './professional-page.css',
 })
