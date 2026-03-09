@@ -1,0 +1,83 @@
+.education-card {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  color: #F5F5F5;
+  border-radius: 10px;
+  border: 1px solid rgba(50,205,50,0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.education-card:hover {
+  border: 1px solid limegreen;
+  box-shadow: 0 0 10px rgba(50,205,50,0.5);
+}
+
+.image-container {
+  position: relative;
+}
+
+/* imagem */
+.card-header-img {
+  height: 16vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* fade escuro para leitura do texto */
+.image-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.85) 0%,
+    rgba(0,0,0,0.5) 30%,
+    rgba(0,0,0,0) 70%
+  );
+  z-index: 1;
+}
+
+/* textos sobre a imagem */
+.card-text-overlay {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  right: 80px;
+  color: white;
+  z-index: 2; /* acima do fade */
+}
+
+.card-title {
+  margin: 0;
+  font-weight: 500;
+  color: #F5F5F5;
+}
+
+.card-subtitle {
+  margin: 2px 0 0 0;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #F5F5F5;
+}
+
+.card-avatar {
+  position: absolute;
+  right: 16px;
+  top: 12vh;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid rgb(255, 255, 255);
+  background: black;
+  z-index: 2;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.card-content {
+  padding-top: 16px;
+  color: #DDD;
+}

@@ -37,11 +37,11 @@ export class About {
 
   setImages() {
     if (this.currentPage === 'professional') {
-      this.mainImage = 'Puto.jpg';   // profissional
-      this.hoverImage = 'Puto.jpg';  // pessoal
+      this.mainImage = 'Puto.jpg';   
+      this.hoverImage = 'Puto.jpg';  
     } else {
-      this.mainImage = 'Puto.jpg';   // pessoal
-      this.hoverImage = 'Puto.jpg';  // profissional
+      this.mainImage = 'Puto.jpg';   
+      this.hoverImage = 'Puto.jpg';  
     }
   }
 

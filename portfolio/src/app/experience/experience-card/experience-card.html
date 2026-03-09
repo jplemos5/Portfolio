@@ -1,0 +1,15 @@
+<mat-card class="education-card">
+  <div class="image-container">
+    <img mat-card-image [src]="image" class="card-header-img">
+    <div class="card-text-overlay">
+      <h3 class="card-title">{{ title }}</h3>
+      <h4 class="card-subtitle">{{ subtitle }}</h4>
+    </div>
+  </div>
+  <img mat-card-avatar [src]="logo" class="card-avatar"/>
+  <mat-card-content class="card-content">
+    {{ text }}
+  </mat-card-content>
+  <mat-icon class="expand-icon" style="position: absolute; right: 0; bottom: 0; color: limegreen;">info</mat-icon>
+</mat-card>
+
