@@ -27,13 +27,13 @@ export class ExperienceCard {
 
   constructor(private dialog: MatDialog) {}
 
-openDialog() {
-  this.currentIndex = this.index;
-  this.dialog.open(this.dialogTemplate, {
-    width: '650px',
-    panelClass: 'experience-dialog'
-  });
-}
+  openDialog() {
+    this.currentIndex = this.index;
+    this.dialog.open(this.dialogTemplate, {
+      width: '650px',
+      panelClass: 'experience-dialog'
+    });
+  }
 
   get currentExperience() { return this.experiences[this.currentIndex]; }
 

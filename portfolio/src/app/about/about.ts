@@ -46,26 +46,23 @@ export class About {
   }
 
   onMouseEnter() {
-    if (this.hoverService.hoverDisabled) return; // não faz hover se estiver desativado
+    if (this.hoverService.hoverDisabled) return;
     this.hovering = true;
   }
 
   onMouseLeave() {
     this.hovering = false;
-    this.hoverService.hoverDisabled = false;  // reativa hover após sair
+    this.hoverService.hoverDisabled = false;  
   }
 
   togglePage() {
-    // desativa hover temporariamente
     this.hoverService.hoverDisabled = true;
     this.hovering = false;
 
-    // alterna página
     this.currentPage = this.currentPage === 'professional' ? 'personal' : 'professional';
     this.selectedMode = this.currentPage;
     this.setImages();
 
-    // navega para a nova rota
     this.router.navigate([this.currentPage]);
   }
 

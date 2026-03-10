@@ -2,10 +2,9 @@
     <mat-card style="width: 77.5vw; margin: auto; margin-top: 30px; background-color: transparent; box-shadow: none;">
         <div style="display: flex; align-items: center; width: 100%;">
             <div style="width: 50%; max-width: 600px; display: flex; flex-direction: column;">
-                <!-- Título -->
+
                 <h1 style="font-size: 90px; color:#F5F5F5; margin-bottom: 45px;">About Me</h1>
 
-                <!-- Texto dividido em parágrafos curtos -->
                 <h2 style="color:#F5F5F5; font-weight: 400; line-height: 1.6;">
                     I am a committed and proactive IT professional who recently completed a Master’s degree in Computer Science, achieving a final grade of 17 on my thesis.
                     Over the past five years, I have worked on several projects independently and collaboratively, which helped me develop strong technical and interpersonal skills.
@@ -14,7 +13,6 @@
                     I enjoy learning new technologies, tackling complex problems, and contributing effectively in team environments. I am eager to continue expanding my knowledge in software development, take on new challenges, and apply my skills to practical, real-world contexts.
                 </h2>
 
-                <!-- Botões -->
                 <div class="action-buttons" style="margin-top: 25px; display: flex; gap: 15px;">
                     <a class="action-button" href="João Lemos CV.pdf" target="_blank" rel="noopener noreferrer">
                         <mat-icon>description</mat-icon> Curriculum Vitae
@@ -26,24 +24,21 @@
             </div>
 
             <div style="width:50%; margin-left:auto; display:flex; flex-direction:column; align-items:center;">
-                <!-- Container da imagem -->
+
                 <div class="image-swap-container"
                     (mouseenter)="onMouseEnter()"
                     (mouseleave)="onMouseLeave()"
                     (click)="togglePage()"
                     style="margin-bottom:10px; cursor:pointer;">
 
-                    <!-- Imagem principal -->
                     <img [src]="mainImage" alt="Current Image" class="main-image">
 
-                    <!-- Hover image -->
                     <img *ngIf="!hoverService.hoverDisabled && hovering"
                         [src]="hoverImage"
                         alt="Hover Image"
                         class="hover-image">
                 </div>
 
-                <!-- Toggle buttons centralizados -->
                 <div style="display:flex; justify-content:center; gap:10px;">
                     <mat-button-toggle-group
                         [(ngModel)]="selectedMode"

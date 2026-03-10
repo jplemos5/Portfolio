@@ -4,16 +4,16 @@
         <div *ngFor="let exp of experiences; let i = index"
             class="container"
             [ngClass]="exp.side">
-        <app-experience-card
-            [title]="exp.title"
-            [subtitle]="exp.subtitle"
-            [image]="exp.image"
-            [logo]="exp.logo"
-            [text]="exp.text"
-            [fulltext]="exp.fulltext"
-            [experiences]="experiences"
-            [index]="i">
-        </app-experience-card>
+            <app-experience-card
+                [title]="exp.title"
+                [subtitle]="exp.subtitle"
+                [image]="exp.image"
+                [logo]="exp.logo"
+                [text]="exp.text"
+                [fulltext]="exp.fulltext"
+                [experiences]="experiences"
+                [index]="i">
+            </app-experience-card>
         </div>
     </div>
 </section>
