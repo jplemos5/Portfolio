@@ -13,7 +13,7 @@ import { Background } from './background/background';
       <router-outlet></router-outlet>
     </div>
   `,
-  styleUrls: ['./app.css']
+  styleUrls: ['./app.css', "../material-theme.scss"]
 })
 export class App {
 

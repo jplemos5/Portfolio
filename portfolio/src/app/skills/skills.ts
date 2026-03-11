@@ -18,105 +18,93 @@ export class Skills {
         {
           skill: "Angular",
           percentage: 85,
-          imageUrl: "a"
+          imageUrl: "Angular Logo.png"
         },
         {
           skill: "React",
           percentage: 85,
-          imageUrl: "a"
+          imageUrl: "React Logo.png"
         },
         {
           skill: "TS",
           percentage: 85,
-          imageUrl: "a"
+          imageUrl: "TS Logo.png"
         },
         {
           skill: "HTML",
           percentage: 85,
-          imageUrl: "a"
+          imageUrl: "HTML Logo.png"
         },
         {
           skill: "CSS",
           percentage: 85,
-          imageUrl: "a"
+          imageUrl: "CSS Logo.png"
         },
       ],
       "Backend": [
         {
           skill: "JS",
           percentage: 85,
-          imageUrl: "a"
+          imageUrl: "JS Logo.png"
         },
         {
           skill: "Node.js",
           percentage: 85,
-          imageUrl: "a"
+          imageUrl: "Node Logo.png"
         },
         {
           skill: "Java",
           percentage: 85,
-          imageUrl: "a"
+          imageUrl: "Java Logo.png"
         },
         {
           skill: "Python",
           percentage: 85,
-          imageUrl: "a"
+          imageUrl: "Python Logo.png"
         },
         {
           skill: "Django",
           percentage: 85,
-          imageUrl: "a"
+          imageUrl: "Django Logo.png"
         },
         {
           skill: "Flask",
           percentage: 85,
-          imageUrl: "a"
+          imageUrl: "Flask Logo.png"
         },
       ],
       "Databases": [
         {
           skill: "MongoDB",
           percentage: 85,
-          imageUrl: "a"
+          imageUrl: "MongoDB Logo.png"
         },
         {
           skill: "SQL",
           percentage: 85,
-          imageUrl: "a"
+          imageUrl: "MySQL Logo.png"
         },
         {
           skill: "Firebase",
           percentage: 85,
-          imageUrl: "a"
+          imageUrl: "Firebase Logo.png"
         }
       ],
-      "Tools": [
+      "Other Skills": [
         {
           skill: "Git",
           percentage: 85,
-          imageUrl: "a"
+          imageUrl: "Git Logo.png"
         },
-        {
-          skill: "npm",
-          percentage: 85,
-          imageUrl: "a"
-        },
-        {
-          skill: "pip",
-          percentage: 85,
-          imageUrl: "a"
-        }
-      ],
-      "Soft Skills": [
         {
           skill: "SCRUM",
           percentage: 85,
-          imageUrl: "a"
+          imageUrl: "SCRUM Logo.png"
         },
         {
           skill: "Documentation",
           percentage: 85,
-          imageUrl: "a"
+          imageUrl: "Documentation Logo.png"
         }
       ]
     }

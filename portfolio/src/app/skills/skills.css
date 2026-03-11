@@ -1,0 +1,36 @@
+.skills-container {
+  background-color: #000;
+  border-radius: 12px;
+  border: 1px solid rgba(20, 230, 20, 0.517);
+  transition: all 0.3s ease;
+  padding: 25px;
+}
+
+.skills-container:hover {
+  border: 1px solid rgb(44, 156, 44);
+  box-shadow: 0 0 12px rgba(18, 163, 18, 0.336);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 5px;
+  justify-items: center;
+}
+
+.skills-tabs {
+  overflow: hidden;
+}
+
+.skills-tabs .mat-mdc-tab-body-wrapper {
+  overflow: hidden;
+}
+
+.skills-tabs .mat-mdc-tab-body-content {
+  overflow: hidden;
+}
+
+::ng-deep .mat-mdc-tab-body-content {
+  overflow: hidden;
+}
