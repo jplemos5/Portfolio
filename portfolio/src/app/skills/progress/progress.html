@@ -1,13 +1,13 @@
 <mat-card class="skill-card">
-    <div class="logo">
-        <img [src]="imageUrl" [alt]="skill + ' Logo'">
-    </div>
+  <div class="logo">
+    <img [src]="imageUrl" [alt]="skill + ' Logo'">
+  </div>
 
-    <div class="content">
-        <div class="skill-header">
-            <h4>{{skill}}</h4>
-            <span>{{percentage}} %</span>
-        </div>
-            <mat-progress-bar class="lime" mode="determinate" style="border-radius: 10px;" value={{percentage}}></mat-progress-bar>
-        </div>
+  <div class="content">
+    <div class="skill-header">
+      <h4>{{skill}}</h4>
+      <span>{{percentage}} %</span>
+    </div>
+    <mat-progress-bar class="lime" mode="determinate" style="border-radius: 10px;" [value]="percentage"></mat-progress-bar>
+  </div>
 </mat-card>

@@ -31,7 +31,6 @@
   transform: scale(1.15);  
 }
 
-
 /* imagem */
 .card-header-img {
   height: 16vh;
@@ -80,7 +79,7 @@
 .card-avatar {
   position: absolute;
   right: 10px;
-  top: 12vh;
+  top: 10vh;
   width: 55px;
   height: 55px;
   border-radius: 50%;

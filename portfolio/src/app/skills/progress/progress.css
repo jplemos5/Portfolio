@@ -1,28 +1,24 @@
 /* ---------- Skill Card ---------- */
-
 .skill-card {
   position: relative;
   width: 100% !important;
-  margin-top: 15px;
-  margin-bottom: 15px;
-
+  margin: 15px 0;
   background-color: #000;
   color: #F5F5F5;
-
   border-radius: 10px;
   border: 1px solid rgba(50,205,50,0.2);
-
-  transition: all 0.3s ease;
-
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform-style: preserve-3d; /* necessário para efeito 3D */
+  perspective: 1000px;           /* profundidade */
 }
 
 .skill-card:hover {
   border: 1px solid limegreen;
-  box-shadow: 0 0 10px rgba(50,205,50,0.5);
+  box-shadow: 0 10px 25px rgba(50,205,50,0.4);
 }
 
 /* ---------- Skill Card Content ---------- */
@@ -52,3 +48,4 @@
 mat-progress-bar {
   width: 100%;
 }
+
