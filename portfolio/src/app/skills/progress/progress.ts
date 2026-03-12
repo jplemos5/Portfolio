@@ -21,14 +21,14 @@ export class Progress {
     const card = this.el.nativeElement.querySelector('.skill-card');
     const rect = card.getBoundingClientRect();
 
-    const x = e.clientX - rect.left; // posição X dentro do cartão
-    const y = e.clientY - rect.top;  // posição Y dentro do cartão
+    const x = e.clientX - rect.left; 
+    const y = e.clientY - rect.top; 
 
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
 
-    const rotateX = ((y - centerY) / centerY) * 10; // máximo 10 deg
-    const rotateY = ((x - centerX) / centerX) * 10; // máximo 10 deg
+    const rotateX = ((y - centerY) / centerY) * 10; 
+    const rotateY = ((x - centerX) / centerX) * 10; 
 
     card.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
   }

@@ -1,0 +1,50 @@
+<section id="contacts" class="section contacts-section" style="width: 77.5vw; margin: auto;">
+  <h1 class="contacts-title">Contacts</h1>
+  <h5 class="contacts-subtitle">
+    This part isn't gonna be easy! I won't share my contacts with everybody!
+  </h5>
+
+  <mat-card class="contacts-card">
+
+    <!-- Conteúdo dinamico -->
+    <div class="contacts-content" [class.locked]="!unlocked">
+      <h2>Secure Channel Established</h2>
+      <div *ngFor="let line of displayedContacts; let i = index" class="contact-line">
+        <ng-container [ngSwitch]="i">
+            <span *ngSwitchCase="0">{{line}}</span> <!-- Email -->
+            <span *ngSwitchCase="1">{{line}}</span> <!-- Phone -->
+            <div *ngSwitchCase="2" class="contacts-buttons">
+              <button mat-button class="contact-button" (click)="openGithub()">
+                GitHub
+              </button>
+            </div>
+            <div *ngSwitchCase="3" class="contacts-buttons">
+              <button mat-button class="contact-button" (click)="openLinkedIn()">
+                LinkedIn
+              </button>
+            </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="unlock-overlay" style="border-radius: 12px;" *ngIf="!unlocked">
+      <div class="unlock-box">
+        <h3>Encrypted Contact Channel</h3>
+        <p>Provide the public key to decrypt contacts data.</p>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <input matInput placeholder="Enter Public Key" [(ngModel)]="inputKey">
+        </mat-form-field>
+
+        <div class="buttons">
+          <button mat-button class="contact-button" (click)="verifyKey()">Verify Key</button>
+          <button mat-button class="contact-button" (click)="skip()">Skip</button>
+        </div>
+
+        <p *ngIf="displayText" class="decrypt-text">{{displayText}}</p>
+      </div>
+    </div>
+
+  </mat-card>
+</section>

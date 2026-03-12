@@ -1,0 +1,159 @@
+.contacts-card {
+  position: relative;
+  height: 300px;
+  margin-bottom: 100px;
+  width: 92%;
+  background-color: #0b0b0b;
+  color: #F5F5F5;
+
+  border-radius: 12px;
+  border: 1px solid rgba(50,205,50,0.15);
+
+  transition: all 0.3s ease;
+
+  padding: 30px;
+  margin: auto;
+}
+
+.contacts-card:hover {
+  border: 1px solid limegreen;
+  box-shadow: 0 0 15px rgba(50,205,50,0.35);
+}
+
+.contacts-content.locked {
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+.unlock-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  margin: auto;
+}
+
+.unlock-box {
+  text-align: center;
+  color: #F5F5F5;
+  width: 350px;
+}
+
+.unlock-box mat-form-field {
+  margin-top: 15px;
+}
+
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.decrypt-text {
+  font-family: monospace;
+  letter-spacing: 2px;
+  margin-top: 15px;
+  font-size: 18px;
+  color: limegreen;
+}
+
+.contact-line {
+  margin-top: 10px;
+}
+
+.contacts-title {
+  font-size: 90px; 
+  color:#F5F5F5; 
+  margin-bottom: 40px;
+}
+
+.contacts-subtitle {
+  font-size: 17.5px; 
+  color:#F5F5F5; 
+  margin-bottom: 45px;
+  font-weight: 450;
+}
+
+h3 {
+  font-family: monospace;
+}
+
+p {
+  font-family: monospace;
+}
+
+/* Botões da secção contacts */
+
+.contacts-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.contact-button {
+  border-radius: 999px;
+  padding: 8px 18px;
+
+  color: limegreen;
+  background-color: black;
+
+  border: 1px solid rgba(50,205,50,0.2);
+
+  transition: all 0.3s ease;
+
+  font-family: monospace;
+}
+
+.contact-button:hover {
+  background-color: rgba(50,205,50,0.25);
+  box-shadow: 0 0 6px 1px limegreen;
+}
+
+/* active style (opcional) */
+.contact-button.active {
+  color: limegreen;
+  box-shadow: 0 0 6px 1px rgba(50,205,50,0.5);
+}
+
+.contacts-content h2 {
+  color: limegreen;
+  font-family: monospace;
+  margin-bottom: 20px;
+}
+
+.contacts-content {
+  font-family: monospace;
+  color: #9cff9c;
+}
+
+.contacts-content h2 {
+  color: limegreen;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+.contact-line {
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.contacts-card::before{
+  content:"SECURE TERMINAL";
+  position:absolute;
+  top:10px;
+  left:20px;
+
+  font-size:11px;
+  font-family:monospace;
+
+  color:rgba(50,205,50,0.7);
+  background:#0b0b0b;
+
+  padding:2px 8px;
+  border-radius:6px;
+}

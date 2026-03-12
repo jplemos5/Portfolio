@@ -97,7 +97,7 @@ export class Background implements AfterViewInit {
         const nx = x * this.scale;
         const ny = y * this.scale;
         const noiseVal = this.perlin.noise(nx + this.time, ny + this.time);
-        const gray = Math.floor(70 * noiseVal); 
+        const gray = Math.floor(90 * noiseVal); 
         const brightness =  0.5 * noiseVal;    
         this.ctx.strokeStyle = `rgba(${gray}, ${gray}, ${gray}, ${brightness})`;
         this.ctx.beginPath();
