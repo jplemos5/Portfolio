@@ -1,159 +1,222 @@
 .contacts-card {
-  position: relative;
-  height: 300px;
-  margin-bottom: 100px;
-  width: 92%;
-  background-color: #0b0b0b;
-  color: #F5F5F5;
+position: relative;
+min-height: 400px;
+margin-bottom: 100px;
 
-  border-radius: 12px;
-  border: 1px solid rgba(50,205,50,0.15);
+background-color: #0b0b0b;
+color: #F5F5F5;
 
-  transition: all 0.3s ease;
+border-radius: 12px;
+border: 1px solid rgba(50,205,50,0.15);
 
-  padding: 30px;
-  margin: auto;
+padding: 30px;
+
+transition: all 0.3s ease;
+
 }
 
 .contacts-card:hover {
-  border: 1px solid limegreen;
-  box-shadow: 0 0 15px rgba(50,205,50,0.35);
+
+border: 1px solid limegreen;
+box-shadow: 0 0 15px rgba(50,205,50,0.35);
+
 }
 
 .contacts-content.locked {
-  filter: blur(6px);
-  pointer-events: none;
-}
 
-.unlock-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0,0,0,0.75);
-  backdrop-filter: blur(5px);
-  border-radius: 12px;
-  margin: auto;
-}
+filter: blur(6px);
+pointer-events: none;
 
-.unlock-box {
-  text-align: center;
-  color: #F5F5F5;
-  width: 350px;
-}
-
-.unlock-box mat-form-field {
-  margin-top: 15px;
-}
-
-.buttons {
-  margin-top: 15px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-.decrypt-text {
-  font-family: monospace;
-  letter-spacing: 2px;
-  margin-top: 15px;
-  font-size: 18px;
-  color: limegreen;
-}
-
-.contact-line {
-  margin-top: 10px;
-}
-
-.contacts-title {
-  font-size: 90px; 
-  color:#F5F5F5; 
-  margin-bottom: 40px;
-}
-
-.contacts-subtitle {
-  font-size: 17.5px; 
-  color:#F5F5F5; 
-  margin-bottom: 45px;
-  font-weight: 450;
-}
-
-h3 {
-  font-family: monospace;
-}
-
-p {
-  font-family: monospace;
-}
-
-/* Botões da secção contacts */
-
-.contacts-buttons {
-  display: flex;
-  gap: 10px;
-  margin-top: 12px;
-}
-
-.contact-button {
-  border-radius: 999px;
-  padding: 8px 18px;
-
-  color: limegreen;
-  background-color: black;
-
-  border: 1px solid rgba(50,205,50,0.2);
-
-  transition: all 0.3s ease;
-
-  font-family: monospace;
-}
-
-.contact-button:hover {
-  background-color: rgba(50,205,50,0.25);
-  box-shadow: 0 0 6px 1px limegreen;
-}
-
-/* active style (opcional) */
-.contact-button.active {
-  color: limegreen;
-  box-shadow: 0 0 6px 1px rgba(50,205,50,0.5);
-}
-
-.contacts-content h2 {
-  color: limegreen;
-  font-family: monospace;
-  margin-bottom: 20px;
 }
 
 .contacts-content {
-  font-family: monospace;
-  color: #9cff9c;
+
+font-family: monospace;
+color: #9cff9c;
+
 }
 
 .contacts-content h2 {
-  color: limegreen;
-  margin-bottom: 25px;
-  font-size: 26px;
+
+color: limegreen;
+margin-bottom: 25px;
+
 }
 
 .contact-line {
-  margin-top: 12px;
-  font-size: 15px;
+
+margin-top: 12px;
+
 }
 
-.contacts-card::before{
-  content:"SECURE TERMINAL";
-  position:absolute;
-  top:10px;
-  left:20px;
+.contact-button {
 
-  font-size:11px;
-  font-family:monospace;
+border-radius: 999px;
+padding: 8px 18px;
 
-  color:rgba(50,205,50,0.7);
-  background:#0b0b0b;
+color: limegreen;
+background-color: black;
 
-  padding:2px 8px;
-  border-radius:6px;
+border: 1px solid rgba(50,205,50,0.2);
+
+transition: all 0.3s ease;
+
+font-family: monospace;
+
+}
+
+.contact-button:hover {
+
+background-color: rgba(50,205,50,0.25);
+box-shadow: 0 0 6px 1px limegreen;
+
+}
+
+.contacts-title {
+
+font-size: 90px;
+color: #F5F5F5;
+margin-bottom: 40px;
+
+}
+
+.contacts-subtitle {
+
+font-size: 17.5px;
+color: #F5F5F5;
+margin-bottom: 45px;
+font-weight: 450;
+
+}
+
+.unlock-overlay {
+
+position: absolute;
+inset: 0;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+background: rgba(0,0,0,0.8);
+backdrop-filter: blur(6px);
+
+border-radius: 12px;
+
+overflow: hidden;
+
+}
+
+.unlock-box {
+
+position: relative;
+z-index: 2;
+
+text-align: center;
+color: #F5F5F5;
+width: 350px;
+
+}
+
+.decrypt-text {
+
+font-family: monospace;
+letter-spacing: 2px;
+margin-top: 15px;
+font-size: 18px;
+color: limegreen;
+
+}
+
+/* BINARY EFFECT */
+
+.binary-layer{
+
+text-shadow:0 0 6px limegreen;
+
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+font-family:monospace;
+font-size:14px;
+line-height:14px;
+
+color:limegreen;
+
+opacity:0.6;
+
+pointer-events:none;
+overflow:hidden;
+
+}
+
+.binary-layer pre{
+
+margin:0;
+
+width:100%;
+height:100%;
+
+white-space:normal;
+word-break:break-all;
+overflow:hidden;
+
+}
+
+.binary-fade {
+
+animation: binaryFade 1.2s forwards;
+
+}
+
+@keyframes binaryFade {
+
+0% { opacity: 1; }
+
+100% { opacity: 0; }
+
+}
+
+.contacts-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.contacts-content {
+  flex: 1;
+}
+
+.email-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.email-form h2 {
+  color: limegreen;
+  margin-bottom: 5px;
+}
+
+.success-message {
+  margin-top: 5px;
+  color: #6cff6c;
+  font-family: monospace;
+}
+
+.email-form mat-form-field {
+
+width: 100%;
+
+}
+
+.contact-icon{
+  margin-right:8px;
+  color:#00ff66;
+  font-size:16px;
 }

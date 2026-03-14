@@ -3,48 +3,117 @@
   <h5 class="contacts-subtitle">
     This part isn't gonna be easy! I won't share my contacts with everybody!
   </h5>
-
   <mat-card class="contacts-card">
-
-    <!-- Conteúdo dinamico -->
-    <div class="contacts-content" [class.locked]="!unlocked">
-      <h2>Secure Channel Established</h2>
-      <div *ngFor="let line of displayedContacts; let i = index" class="contact-line">
-        <ng-container [ngSwitch]="i">
-            <span *ngSwitchCase="0">{{line}}</span> <!-- Email -->
-            <span *ngSwitchCase="1">{{line}}</span> <!-- Phone -->
-            <div *ngSwitchCase="2" class="contacts-buttons">
-              <button mat-button class="contact-button" (click)="openGithub()">
-                GitHub
-              </button>
-            </div>
-            <div *ngSwitchCase="3" class="contacts-buttons">
-              <button mat-button class="contact-button" (click)="openLinkedIn()">
-                LinkedIn
-              </button>
-            </div>
-        </ng-container>
-      </div>
-    </div>
-
-    <!-- Overlay -->
-    <div class="unlock-overlay" style="border-radius: 12px;" *ngIf="!unlocked">
-      <div class="unlock-box">
-        <h3>Encrypted Contact Channel</h3>
-        <p>Provide the public key to decrypt contacts data.</p>
-
-        <mat-form-field appearance="outline" style="width: 100%;">
-          <input matInput placeholder="Enter Public Key" [(ngModel)]="inputKey">
-        </mat-form-field>
-
-        <div class="buttons">
-          <button mat-button class="contact-button" (click)="verifyKey()">Verify Key</button>
-          <button mat-button class="contact-button" (click)="skip()">Skip</button>
+    <div class="contacts-container">
+      <div class="contacts-content" [class.locked]="!unlocked">
+        <h2 class="terminal-title">
+          Secure Channel Established<span class="cursor"></span>
+        </h2>
+        <div class="terminal-log" *ngIf="unlocked">
+          <p>> decrypting contact nodes...</p>
+          <p>> connection established</p>
+          <br>
         </div>
+        <div class="node-box" *ngIf="unlocked">
+          <p>Node Status: ONLINE</p>
+          <p>Encryption: RSA-2048</p>
+        </div>
+        <div *ngFor="let line of displayedContacts; let i = index" class="contact-line">
+          <ng-container [ngSwitch]="i">
+            <p *ngSwitchCase="0">
+              <span class="status-dot"></span>
+              {{ line }}
+            </p>
+            <p *ngSwitchCase="1">
+              <span class="status-dot"></span>
+              {{ line }}
+            </p>
+            <div *ngSwitchCase="2" class="external-links">
+            <br>
+            <button
+              mat-button
+              class="contact-button"
+              (click)="openGithub()" style="margin-right: 5px;">
+              
+              <i class="fab fa-github contact-icon"></i>
+              GitHub
+            </button>
 
-        <p *ngIf="displayText" class="decrypt-text">{{displayText}}</p>
+            <button
+              mat-button
+              class="contact-button"
+              (click)="openLinkedIn()">
+              <i class="fab fa-linkedin contact-icon"></i>
+              LinkedIn
+            </button>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <div class="email-form" *ngIf="unlocked">
+        <h2 style="font-family: monospace;">Send Secure Message</h2>
+        <mat-form-field appearance="outline">
+          <mat-label style="font-family: monospace;">Your Email</mat-label>
+          <input style="font-family: monospace;" matInput [(ngModel)]="userEmail">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label style="font-family: monospace;">Subject</mat-label>
+          <input style="font-family: monospace;" matInput [(ngModel)]="subject">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label style="font-family: monospace;">Message</mat-label>
+          <textarea
+            style="font-family: monospace;"
+            matInput
+            rows="5"
+            [(ngModel)]="message">
+          </textarea>
+        </mat-form-field>
+        <button
+          mat-raised-button
+          class="contact-button"
+          (click)="sendEmail()" style="background-color: black; font-family: monospace;">
+          Transmit Message
+        </button>
+        <p class="success-message" *ngIf="successMessage" style="font-family: monospace;">
+          {{ successMessage }}
+        </p>
       </div>
     </div>
-
+    <div class="unlock-overlay" *ngIf="!unlocked">
+      <div
+        class="binary-layer"
+        *ngIf="showBinary"
+        [class.binary-fade]="binaryFade">
+        <pre>{{ binaryText }}</pre>
+      </div>
+      <div class="unlock-box" *ngIf="!hideUnlockBox">
+        <h3 style="font-family: monospace;">Encrypted Contact Channel</h3>
+        <p style="font-family: monospace;">Provide the public key to decrypt contacts data.</p>
+        <mat-form-field appearance="outline" style="width:100%">
+          <input
+            matInput
+            placeholder="Enter Public Key"
+            [(ngModel)]="inputKey">
+        </mat-form-field>
+        <div class="buttons">
+          <button
+            mat-button
+            class="contact-button"
+            (click)="verifyKey()">
+            Verify Key
+          </button>
+          <button
+            mat-button
+            class="contact-button"
+            (click)="skip()">
+            Skip
+          </button>
+        </div>
+        <p *ngIf="displayText" class="decrypt-text">
+          {{ displayText }}
+        </p>
+      </div>
+    </div>
   </mat-card>
 </section>
