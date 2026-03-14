@@ -1,0 +1,8 @@
+.public-key{
+    color: lime;
+    text-decoration: none;
+}
+
+.public-key:hover{
+    color: rgb(10, 138, 10);
+}

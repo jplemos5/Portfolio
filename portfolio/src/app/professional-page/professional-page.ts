@@ -5,11 +5,11 @@ import { HoverService } from '../hover';
 import { Experience } from '../experience/experience';
 import { Skills } from '../skills/skills';
 import { Contacts } from '../contacts/contacts';
-
+import { Projects } from '../projects/projects';
 
 @Component({
   selector: 'app-professional-page',
-  imports: [TopBar, About, Experience, Skills, Contacts],
+  imports: [TopBar, About, Experience, Skills, Contacts, Projects],
   templateUrl: './professional-page.html',
   styleUrl: './professional-page.css',
 })
