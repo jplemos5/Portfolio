@@ -90,7 +90,7 @@ export class Skills {
           imageUrl: "Firebase Logo.png"
         }
       ],
-      "Other Skills": [
+      "Soft Skills": [
         {
           skill: "Git",
           percentage: 85,
@@ -105,6 +105,16 @@ export class Skills {
           skill: "Documentation",
           percentage: 85,
           imageUrl: "Documentation Logo.png"
+        },
+        {
+          skill: "Communication",
+          percentage: 85,
+          imageUrl: "Communication Logo.png"
+        },
+        {
+          skill: "Organization",
+          percentage: 85,
+          imageUrl: "Organization Logo.png"
         }
       ]
     }

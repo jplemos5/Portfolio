@@ -1,0 +1,17 @@
+.projects-section{
+    width: 77.5vw;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.projects-title{
+    font-size: 90px;
+    color:#F5F5F5;
+    margin-bottom: 65px;
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}

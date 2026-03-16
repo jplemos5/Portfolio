@@ -1,0 +1,154 @@
+/* CARD */
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  color: #F5F5F5;
+  border-radius: 10px;
+  border: 1px solid rgba(50,205,50,0.2);
+  transition: all 0.3s ease;
+  padding-bottom: 12px;
+}
+
+.project-card:hover {
+  border: 1px solid limegreen;
+  box-shadow: 0 0 10px rgba(50,205,50,0.5);
+}
+
+
+/* IMAGE CONTAINER */
+
+.image-container {
+  overflow: hidden;
+  position: relative;
+}
+
+/* imagem */
+
+.project-image {
+  height: 20vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+/* zoom */
+
+.image-container:hover .project-image {
+  transform: scale(1.05);
+}
+
+
+/* gradient para legibilidade */
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.9) 0%,
+    rgba(0,0,0,0.55) 35%,
+    rgba(0,0,0,0) 70%
+  );
+
+  z-index: 1;
+}
+
+
+/* TEXTO SOBRE IMAGEM */
+
+.image-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 16px;
+  right: 16px;
+
+  color: white;
+  z-index: 2;
+}
+
+.project-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #F5F5F5;
+}
+
+
+/* BODY */
+
+.project-body {
+  padding: 16px;
+  color: #DDD;
+}
+
+.project-description {
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+
+/* SKILLS TAGS */
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill{
+  background: rgba(50,205,50,0.15);
+  border: 1px solid rgba(50,205,50,0.4);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: limegreen;
+  transition: all 0.2s ease;
+}
+
+/* glow apenas */
+.skill:hover{
+  box-shadow: 0 0 6px rgba(50,205,50,0.8);
+  border-color: limegreen;
+}
+
+.project-links{
+  position:absolute;
+  bottom:10px;
+  right:10px;
+
+  display:flex;
+  gap:8px;
+  z-index:3; /* acima do gradient */
+}
+
+.project-link{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  width:32px;
+  height:32px;
+
+  border-radius:50%;
+
+  background:rgba(0,0,0,0.6);
+  border:1px solid rgba(50,205,50,0.5);
+
+  color:limegreen;
+
+  backdrop-filter: blur(4px);
+
+  transition: all 0.2s ease;
+}
+
+.project-link:hover{
+  box-shadow:0 0 8px rgba(50,205,50,0.8);
+  border-color:limegreen;
+  transform:scale(1.1);
+}
