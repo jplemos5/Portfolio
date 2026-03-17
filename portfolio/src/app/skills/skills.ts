@@ -17,54 +17,54 @@ export class Skills {
       "Frontend": [
         {
           skill: "Angular",
-          percentage: 85,
+          percentage: 80,
           imageUrl: "Angular Logo.png"
         },
         {
           skill: "React",
-          percentage: 85,
+          percentage: 70,
           imageUrl: "React Logo.png"
         },
         {
           skill: "TS",
-          percentage: 85,
+          percentage: 75,
           imageUrl: "TS Logo.png"
         },
         {
           skill: "HTML",
-          percentage: 85,
+          percentage: 95,
           imageUrl: "HTML Logo.png"
         },
         {
           skill: "CSS",
-          percentage: 85,
+          percentage: 90,
           imageUrl: "CSS Logo.png"
         },
       ],
       "Backend": [
         {
           skill: "JS",
-          percentage: 85,
+          percentage: 90,
           imageUrl: "JS Logo.png"
         },
         {
           skill: "Node.js",
-          percentage: 85,
+          percentage: 75,
           imageUrl: "Node Logo.png"
         },
         {
           skill: "Java",
-          percentage: 85,
+          percentage: 90,
           imageUrl: "Java Logo.png"
         },
         {
           skill: "Python",
-          percentage: 85,
+          percentage: 90,
           imageUrl: "Python Logo.png"
         },
         {
           skill: "Django",
-          percentage: 85,
+          percentage: 80,
           imageUrl: "Django Logo.png"
         },
         {
@@ -81,12 +81,12 @@ export class Skills {
         },
         {
           skill: "SQL",
-          percentage: 85,
+          percentage: 90,
           imageUrl: "MySQL Logo.png"
         },
         {
           skill: "Firebase",
-          percentage: 85,
+          percentage: 90,
           imageUrl: "Firebase Logo.png"
         }
       ],
@@ -98,24 +98,24 @@ export class Skills {
         },
         {
           skill: "SCRUM",
-          percentage: 85,
+          percentage: 90,
           imageUrl: "SCRUM Logo.png"
         },
         {
           skill: "Documentation",
-          percentage: 85,
+          percentage: 90,
           imageUrl: "Documentation Logo.png"
         },
         {
           skill: "Communication",
-          percentage: 85,
+          percentage: 95,
           imageUrl: "Communication Logo.png"
         },
         {
           skill: "Organization",
-          percentage: 85,
+          percentage: 95,
           imageUrl: "Organization Logo.png"
-        }
+        },
       ]
     }
   ]

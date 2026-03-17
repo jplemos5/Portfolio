@@ -29,7 +29,7 @@ export class Projects {
       text: "Project developed during my Erasmus as part of the WebServices course. The goal was to design and implement a set of APIs that would allow students to easily build platforms for buying or renting bicycles within the university community. Both the backend services and a demonstration website were implemented to showcase the system.",
       skillsUsed: ["Java", "HTML","CSS","JavaScript"],
       image: "EiffelBikeRent.png",
-      links: [{url:"", icon:"code"}]
+      links: [{url:"https://github.com/jplemos5/WebService-Project", icon:"code"}]
     },
     {
       title: "ISCTE Village Website",

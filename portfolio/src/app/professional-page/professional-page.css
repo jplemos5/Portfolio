@@ -5,4 +5,5 @@
 
 .public-key:hover{
     color: rgb(10, 138, 10);
+    cursor: pointer;
 }

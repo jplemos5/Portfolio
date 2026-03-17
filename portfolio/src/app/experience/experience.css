@@ -106,6 +106,20 @@ body {
   border-radius: 6px;
 }
 
+.contacts-subtitle {
+
+font-size: 17.5px;
+color: #F5F5F5;
+margin-bottom: 45px;
+font-weight: 450;
+
+}
+
+.public-key {
+  color: lime !important;
+  font-family: monospace; 
+}
+
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
   .timeline::after {

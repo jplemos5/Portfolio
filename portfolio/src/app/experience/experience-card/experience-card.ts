@@ -17,6 +17,7 @@ export class ExperienceCard {
   @Input() logo!: string;
   @Input() text!: string;
   @Input() fulltext!: string;
+  @Input() key!: string;
 
   @Input() experiences!: any[];
   @Input() index!: number;

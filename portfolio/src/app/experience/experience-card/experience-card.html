@@ -34,10 +34,11 @@
   <img [src]="currentExperience.logo" class="dialog-avatar">
 
   <div class="dialog-body">
-    <p>{{ currentExperience.fulltext }}</p>
+    <p [innerHTML]="currentExperience.fulltext"></p>
+    <span style="color: lime; font-family: monospace;">{{currentExperience.key}}</span>
   </div>
 
-  <div class="dialog-footer">
+  <div class="dialog-footer" style="position: absolute; bottom: 0px;">
 
     <button mat-icon-button (click)="previous()" [disabled]="currentIndex === 0">
       <mat-icon>arrow_back</mat-icon>

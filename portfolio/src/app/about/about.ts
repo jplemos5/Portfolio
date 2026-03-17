@@ -81,7 +81,7 @@ export class About {
   scrollToContacts() {
     const element = document.getElementById('contacts');
     if (element) {
-      const topOffset = 120;
+      const topOffset = 90;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
         top: elementPosition - topOffset,
