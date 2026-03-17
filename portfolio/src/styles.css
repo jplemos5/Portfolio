@@ -1,7 +1,7 @@
 :root {
   --color-white: #F5F5F5;
   --color-black: #000000;
-  --color-green: limegreen;
+  --color-green: #32cd32;
   --color-black-hover: #111;
   --color-glow-hover: rgba(50, 205, 50, 0.28);
   --color-glow-active: rgba(50, 205, 50, 0.5);
@@ -20,16 +20,14 @@
 }
 
 .dialog-card{
-  background:#000;
+  background: var(--color-black);
   border-radius:12px;
-  border:1px solid rgba(50,205,50,0.25);
-  box-shadow:0 0 14px rgba(50,205,50,0.35);
-  color: #F5F5F5;
+  border:1px solid var(--color-glow-hover);
+  box-shadow:0 0 14px var(--color-glow-active);
+  color: var(--color-white);
   overflow:hidden;
   position:relative;
 }
-
-/* HEADER IMAGE */
 
 .dialog-image-container{
   position:relative;
@@ -41,8 +39,6 @@
   height:130px;  
   object-fit:cover;
 }
-
-/* fade igual ao card */
 
 .dialog-image-container::after{
   content:"";
@@ -56,8 +52,6 @@
   );
 }
 
-/* overlay text */
-
 .dialog-text-overlay{
   position:absolute;
   bottom:14px;
@@ -69,16 +63,14 @@
 .dialog-title{
   margin:0;
   font-weight:500;
-  color:#F5F5F5;
+  color: var(--color-white);
 }
 
 .dialog-subtitle{
   margin:4px 0 0;
   font-size:0.9rem;
-  color:#DDD;
+  color: var(--color-white);
 }
-
-/* avatar */
 
 .dialog-avatar{
   position:absolute;
@@ -87,8 +79,8 @@
   width:64px;
   height:64px;
   border-radius:50%;
-  border:3px solid white;
-  background:black;
+  border:3px solid var(--color-white);
+  background:var(--color-black);
   box-shadow:0 0 10px rgba(255,255,255,0.6);
 }
 
@@ -96,10 +88,8 @@
   padding:40px 28px 20px 28px;
   font-size:1.05rem;
   line-height:1.7;
-  color:#DDD;
+  color:var(--color-white);
 }
-
-/* FOOTER */
 
 .dialog-footer{
   display:flex;
@@ -109,7 +99,7 @@
 }
 
 .dialog-footer button{
-  color:limegreen;
+  color:var(--color-green);
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -120,6 +110,6 @@
 }
 
 .dialog-index{
-  color:limegreen;
+  color:var(--color-green);
   font-weight:500;
 }
