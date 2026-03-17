@@ -14,7 +14,7 @@ export class Experience {
   experiences = [
     {
       side: 'left',
-      title: 'Accounting Assistant (Nov. 2025 - Current)',
+      title: 'Accounting Assistant (Nov. 25 - Current)',
       subtitle: 'Effectum',
       image: 'Effectum.jpg',
       logo: 'Effectum Logo.jpg',
@@ -24,7 +24,7 @@ export class Experience {
     },
     {
       side: 'right',
-      title: 'Double Degree Erasmus Program (Sep. 2024 - Feb. 2025)',
+      title: 'Double Degree Erasmus Program (Sep. 24 - Feb. 25)',
       subtitle: 'Université Gustave Eiffel',
       image: 'UGE.jpg',
       logo: 'UGE Logo.jpg',
@@ -34,7 +34,7 @@ export class Experience {
     },
     {
       side: 'right',
-      title: 'Masters in Computer Engineering (Sep. 2023 - Dec. 2025)',
+      title: 'Masters in Computer Engineering (Sep. 23 - Dec. 25)',
       subtitle: 'ISCTE - Instituto Universitário de Lisboa',
       image: 'ISCTE.jpg',
       logo: 'ISCTE Logo.png',
@@ -44,7 +44,7 @@ export class Experience {
     },
     {
       side: 'right',
-      title: 'IT Collaborator (Nov. 2023 - Jun. 2025)',
+      title: 'IT Collaborator (Nov. 23 - Jun. 25)',
       subtitle: 'AEISCTE',
       image: 'ISCTE.jpg',
       logo: 'AEISCTE Logo.png',
@@ -54,7 +54,7 @@ export class Experience {
     },
     {
       side: 'left',
-      title: 'Programming Teacher (Jun. 2023 - Sep. 2024)',
+      title: 'Programming Teacher (Jun. 23 - Sep. 24)',
       subtitle: 'Happy Code',
       image: 'Happy Code.webp',
       logo: 'HC Logo.png',
@@ -64,7 +64,7 @@ export class Experience {
     },
     {
       side: 'left',
-      title: 'Assistant Teacher (Sep. 2021 - Current)',
+      title: 'Assistant Teacher (Sep. 21 - Current)',
       subtitle: 'Bairro de Ideias',
       image: 'Bairro de Ideias.webp',
       logo: 'BI Logo.jpg',
@@ -74,7 +74,7 @@ export class Experience {
     },
     {
       side: 'right',
-      title: 'Bachelor’s Degree in Computer Engineering (Sep. 2020 - Jun. 2023)',
+      title: 'Bachelor’s Degree in Computer Engineering (Sep. 20 - Jun. 23)',
       subtitle: 'ISCTE',
       image: 'ISCTE.jpg',
       logo: 'ISCTE Logo.png',

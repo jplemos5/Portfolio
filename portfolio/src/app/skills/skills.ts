@@ -116,6 +116,28 @@ export class Skills {
           percentage: 95,
           imageUrl: "Organization Logo.png"
         },
+      ],
+      "Languages": [
+        {
+          skill: "Portuguese",
+          percentage: 100,
+          imageUrl: "Portuguese Flag.png"
+        },
+        {
+          skill: "English",
+          percentage: 90,
+          imageUrl: "GB Flag.png"
+        },
+        {
+          skill: "French",
+          percentage: 15,
+          imageUrl: "French Flag.png"
+        },
+        {
+          skill: "Mandarin",
+          percentage: 5,
+          imageUrl: "Chinese Flag.png"
+        },
       ]
     }
   ]

@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 export class TopBar implements AfterViewInit {
   sections = [
     { id: 'about', label: 'About' },
-    { id: 'experience', label: 'Experience' },
+    { id: 'experience', label: 'Experiences' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
   ];
