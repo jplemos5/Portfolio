@@ -7,12 +7,7 @@ import { Background } from './background/background';
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, Background],
-  template: `
-    <div class="page-wrapper">
-      <app-background></app-background>
-      <router-outlet></router-outlet>
-    </div>
-  `,
+  templateUrl: "./app.html" ,
   styleUrls: ['./app.css', "../material-theme.scss"]
 })
 export class App {

@@ -1,9 +1,21 @@
-.public-key{
-    color: lime;
+.public-key {
+    color: var(--color-green);
     text-decoration: none;
 }
 
-.public-key:hover{
-    color: rgb(10, 138, 10);
+.public-key:hover {
+    color: var(--color-glow-active-hover);
     cursor: pointer;
+}
+
+.page-content {
+    padding-top: 60px;
+}
+
+footer {
+    background-color: var(--color-black); 
+    color: var(--color-white); 
+    text-align: center; 
+    padding: 5px 0; 
+    font-size: 14px;
 }

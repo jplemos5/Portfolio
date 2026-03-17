@@ -2,17 +2,17 @@
   position: relative;
   overflow: hidden;
   background-color: #000;
-  color: #F5F5F5;
+  color: var(--color-white);
   border-radius: 10px;
-  border: 1px solid rgba(50,205,50,0.2);
+  border: 1px solid var(--color-button-background-hover);
   transition: all 0.3s ease;
   cursor: pointer;
   padding-bottom: 10px;
 }
 
 .education-card:hover {
-  border: 1px solid limegreen;
-  box-shadow: 0 0 10px rgba(50,205,50,0.5);
+  border: 1px solid var(--color-green);
+  box-shadow: 0 0 10px var(--color-glow-active);
 }
 
 .image-container {
@@ -20,18 +20,15 @@
   position: relative;
 }
 
-/* Imagem */
 .image-container img {
   object-fit: cover;    
   transition: transform 0.3s ease;
 }
 
-/* Zoom ao hover */
 .image-container:hover img {
   transform: scale(1.15);  
 }
 
-/* imagem */
 .card-header-img {
   height: 16vh;
   width: 100%;
@@ -39,7 +36,6 @@
   object-position: top;
 }
 
-/* fade escuro para leitura do texto */
 .image-container::after {
   content: "";
   position: absolute;
@@ -53,27 +49,26 @@
   z-index: 1;
 }
 
-/* textos sobre a imagem */
 .card-text-overlay {
   position: absolute;
   bottom: 8px;
   left: 16px;
   right: 80px;
-  color: white;
-  z-index: 2; /* acima do fade */
+  color: var(--color-white);
+  z-index: 2; 
 }
 
 .card-title {
   margin: 0;
   font-weight: 500;
-  color: #F5F5F5;
+  color: var(--color-white);
 }
 
 .card-subtitle {
   margin: 2px 0 0 0;
   font-weight: 400;
   font-size: 0.9rem;
-  color: #F5F5F5;
+  color: var(--color-white);
 }
 
 .card-avatar {
@@ -83,8 +78,8 @@
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  border: 3px solid rgb(255, 255, 255);
-  background: black;
+  border: 3px solid var(--color-white);
+  background: var(--color-black);
   z-index: 2;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
@@ -97,4 +92,21 @@
 .dialog-card {
   width: 600px;
   min-height: 475px;
+}
+
+.dialog-footer{
+  position: absolute; 
+  bottom: 0px;
+}
+
+.key {
+  color: var(--color-green); 
+  font-family: monospace;
+}
+
+.expand-icon {
+  position:absolute; 
+  right:2px; 
+  bottom:2px;
+  color:var(--color-green);
 }

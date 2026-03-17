@@ -4,5 +4,5 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HoverService {
-  hoverDisabled = false;  // controla se o hover está desativado
+  hoverDisabled = false;  
 }

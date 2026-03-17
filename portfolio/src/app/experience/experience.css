@@ -2,13 +2,12 @@
   box-sizing: border-box;
 }
 
-/* Set a background color */
-body {
-  background-color: #474e5d;
-  font-family: Helvetica, sans-serif;
+.experience-section {
+  width: 77.5vw; 
+  margin: auto; 
+  margin-bottom:150px;
 }
 
-/* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
   max-width: 92%;
@@ -23,17 +22,16 @@ body {
   background: linear-gradient(
     to bottom,
     rgba(50,205,50,0.3),
-    limegreen,
+    var(--color-green),
     rgba(50,205,50,0.3)
   );
-  box-shadow: 0 0 8px limegreen;
+  box-shadow: 0 0 8px var(--color-green);
   top: 0;
   bottom: 0;
   left: 50%;
   margin-left: -2px;
   border-radius: 10px;
 }
-
 
 .container {
   padding: 10px 40px;
@@ -48,17 +46,17 @@ body {
   width: 22px;
   height: 22px;
   right: -11px;
-  background-color: black;
-  border: 3px solid limegreen;
+  background-color: var(--color-black);
+  border: 3px solid var(--color-green);
   top: 18px;
   border-radius: 50%;
   z-index: 2;
-  box-shadow: 0 0 8px limegreen;
+  box-shadow: 0 0 8px var(--color-green);
   transition: all 0.3s ease;
 }
 
 .container:hover::after {
-  box-shadow: 0 0 14px limegreen;
+  box-shadow: 0 0 14px var(--color-green);
 }
 
 .left {
@@ -77,9 +75,9 @@ body {
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid white;
+  border: medium solid var(--color-white);
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #2a2424;
+  border-color: transparent transparent transparent var(--color-glow-hover);
 }
 
 .right::before {
@@ -90,9 +88,9 @@ body {
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid white;
+  border: medium solid var(--color-white);
   border-width: 10px 10px 10px 0;
-  border-color: transparent #2a2424 transparent transparent;
+  border-color: transparent var(--color-glow-hover) transparent transparent;
 }
 
 .right::after {
@@ -101,48 +99,42 @@ body {
 
 .content {
   padding: 20px 30px;
-  background-color: white;
+  background-color: var(--color-white);
   position: relative;
   border-radius: 6px;
 }
 
-.contacts-subtitle {
-
-font-size: 17.5px;
-color: #F5F5F5;
-margin-bottom: 45px;
-font-weight: 450;
-
+.experience-title {
+  font-size: 90px; 
+  color:var(--color-white); 
+  margin-bottom: 45px;
 }
 
-.public-key {
-  color: lime !important;
-  font-family: monospace; 
+.experience-subtitle {
+  font-size: 17.5px;
+  color: var(--color-white);
+  margin-bottom: 45px;
+  font-weight: 450;
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
   .timeline::after {
     left: 30px;
   }
-
   .container {
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
   }
-
   .container::before {
     left: 60px;
-    border: medium solid white;
+    border: medium solid var(--color-white);
     border-width: 10px 10px 10px 0;
-    border-color: transparent #111 transparent transparent;
+    border-color: transparent var(--color-black-hover) transparent transparent;
   }
-
   .left::after, .right::after {
     left: 15px;
   }
-
   .right {
     left: 0%;
   }

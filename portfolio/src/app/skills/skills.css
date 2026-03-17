@@ -1,14 +1,16 @@
 .skills-container {
   background-color: #000;
   border-radius: 12px;
-  border: 1px solid rgba(20, 230, 20, 0.517);
+  border: 1px solid var(--color-glow-active);
   transition: all 0.3s ease;
   padding: 25px;
+  width: 92%; 
+  margin: auto;
 }
 
 .skills-container:hover {
-  border: 1px solid rgb(44, 156, 44);
-  box-shadow: 0 0 12px rgba(18, 163, 18, 0.336);
+  border: 1px solid var(--color-glow-active-hover);
+  box-shadow: 0 0 12px var(--color-glow-active);
 }
 
 .skills-grid {
@@ -35,9 +37,30 @@
   overflow: hidden;
 }
 
-.contacts-subtitle {
+.skills-title {
+  font-size: 90px; 
+  color:var(--color-white); 
+  margin-bottom: 40px;
+}
+
+.skills-subtitle {
   font-size: 17.5px;
-  color: #F5F5F5;
+  color: var(--color-white);
   margin-bottom: 25px;
   font-weight: 450;
 }
+
+.skills-section {
+  width: 77.5vw; 
+  margin: auto; 
+  margin-bottom: 150px;
+}
+
+mat-tab-group{
+  height: 425px;
+}
+
+app-progress {
+  width:95%
+}
+

@@ -18,125 +18,125 @@ export class Skills {
         {
           skill: "Angular",
           percentage: 80,
-          imageUrl: "Angular Logo.png"
+          imageUrl: "Logos/Angular Logo.png"
         },
         {
           skill: "React",
           percentage: 70,
-          imageUrl: "React Logo.png"
+          imageUrl: "Logos/React Logo.png"
         },
         {
           skill: "TS",
           percentage: 75,
-          imageUrl: "TS Logo.png"
+          imageUrl: "Logos/TS Logo.png"
         },
         {
           skill: "HTML",
           percentage: 95,
-          imageUrl: "HTML Logo.png"
+          imageUrl: "Logos/HTML Logo.png"
         },
         {
           skill: "CSS",
           percentage: 90,
-          imageUrl: "CSS Logo.png"
+          imageUrl: "Logos/CSS Logo.png"
         },
       ],
       "Backend": [
         {
           skill: "JS",
           percentage: 90,
-          imageUrl: "JS Logo.png"
+          imageUrl: "Logos/JS Logo.png"
         },
         {
           skill: "Node.js",
           percentage: 75,
-          imageUrl: "Node Logo.png"
+          imageUrl: "Logos/Node Logo.png"
         },
         {
           skill: "Java",
           percentage: 90,
-          imageUrl: "Java Logo.png"
+          imageUrl: "Logos/Java Logo.png"
         },
         {
           skill: "Python",
           percentage: 90,
-          imageUrl: "Python Logo.png"
+          imageUrl: "Logos/Python Logo.png"
         },
         {
           skill: "Django",
           percentage: 80,
-          imageUrl: "Django Logo.png"
+          imageUrl: "Logos/Django Logo.png"
         },
         {
           skill: "Flask",
           percentage: 85,
-          imageUrl: "Flask Logo.png"
+          imageUrl: "Logos/Flask Logo.png"
         },
       ],
       "Databases": [
         {
           skill: "MongoDB",
           percentage: 85,
-          imageUrl: "MongoDB Logo.png"
+          imageUrl: "Logos/MongoDB Logo.png"
         },
         {
           skill: "SQL",
           percentage: 90,
-          imageUrl: "MySQL Logo.png"
+          imageUrl: "Logos/MySQL Logo.png"
         },
         {
           skill: "Firebase",
           percentage: 90,
-          imageUrl: "Firebase Logo.png"
+          imageUrl: "Logos/Firebase Logo.png"
         }
       ],
       "Soft Skills": [
         {
           skill: "Git",
           percentage: 85,
-          imageUrl: "Git Logo.png"
+          imageUrl: "Logos/Git Logo.png"
         },
         {
           skill: "SCRUM",
           percentage: 90,
-          imageUrl: "SCRUM Logo.png"
+          imageUrl: "Logos/SCRUM Logo.png"
         },
         {
           skill: "Documentation",
           percentage: 90,
-          imageUrl: "Documentation Logo.png"
+          imageUrl: "Logos/Documentation Logo.png"
         },
         {
           skill: "Communication",
           percentage: 95,
-          imageUrl: "Communication Logo.png"
+          imageUrl: "Logos/Communication Logo.png"
         },
         {
           skill: "Organization",
           percentage: 95,
-          imageUrl: "Organization Logo.png"
+          imageUrl: "Logos/Organization Logo.png"
         },
       ],
       "Languages": [
         {
           skill: "Portuguese",
           percentage: 100,
-          imageUrl: "Portuguese Flag.png"
+          imageUrl: "Flags/Portuguese Flag.png"
         },
         {
           skill: "English",
           percentage: 90,
-          imageUrl: "GB Flag.png"
+          imageUrl: "Flags/GB Flag.png"
         },
         {
           skill: "French",
           percentage: 15,
-          imageUrl: "French Flag.png"
+          imageUrl: "Flags/French Flag.png"
         },
         {
           skill: "Mandarin",
           percentage: 5,
-          imageUrl: "Chinese Flag.png"
+          imageUrl: "Flags/Chinese Flag.png"
         },
       ]
     }

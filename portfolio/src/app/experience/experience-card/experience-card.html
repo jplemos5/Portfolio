@@ -10,52 +10,31 @@
   <mat-card-content class="card-content">
     {{ text }}
   </mat-card-content>
-  <mat-icon class="expand-icon"
-    style="position:absolute; right:2px; bottom:2px; color:limegreen;">
-    info
-  </mat-icon>
+  <mat-icon class="expand-icon"> info </mat-icon>
 </mat-card>
 
 <ng-template #dialogTemplate>
-
-<div class="dialog-card">
-
-  <div class="dialog-image-container">
-
-    <img [src]="currentExperience.image" class="dialog-header-img">
-
-    <div class="dialog-text-overlay">
-      <h2 class="dialog-title">{{ currentExperience.title }}</h2>
-      <h4 class="dialog-subtitle">{{ currentExperience.subtitle }}</h4>
+  <div class="dialog-card">
+    <div class="dialog-image-container">
+      <img [src]="currentExperience.image" class="dialog-header-img">
+      <div class="dialog-text-overlay">
+        <h2 class="dialog-title">{{ currentExperience.title }}</h2>
+        <h4 class="dialog-subtitle">{{ currentExperience.subtitle }}</h4>
+      </div>
     </div>
-
+    <img [src]="currentExperience.logo" class="dialog-avatar">
+    <div class="dialog-body">
+      <p [innerHTML]="currentExperience.fulltext"></p>
+      <span class="key">{{currentExperience.key}}</span>
+    </div>
+    <div class="dialog-footer">
+      <button mat-icon-button (click)="previous()" [disabled]="currentIndex === 0"> 
+        <mat-icon>arrow_back</mat-icon> 
+      </button>
+      <span class="dialog-index"> {{currentIndex + 1}} / {{experiences.length}} </span>
+      <button mat-icon-button (click)="next()" [disabled]="currentIndex === experiences.length - 1">
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </div>
   </div>
-
-  <img [src]="currentExperience.logo" class="dialog-avatar">
-
-  <div class="dialog-body">
-    <p [innerHTML]="currentExperience.fulltext"></p>
-    <span style="color: lime; font-family: monospace;">{{currentExperience.key}}</span>
-  </div>
-
-  <div class="dialog-footer" style="position: absolute; bottom: 0px;">
-
-    <button mat-icon-button (click)="previous()" [disabled]="currentIndex === 0">
-      <mat-icon>arrow_back</mat-icon>
-    </button>
-
-    <span class="dialog-index">
-      {{currentIndex + 1}} / {{experiences.length}}
-    </span>
-
-    <button mat-icon-button
-            (click)="next()"
-            [disabled]="currentIndex === experiences.length - 1">
-      <mat-icon>arrow_forward</mat-icon>
-    </button>
-
-  </div>
-
-</div>
-
 </ng-template>

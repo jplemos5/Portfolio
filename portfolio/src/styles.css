@@ -1,3 +1,18 @@
+:root {
+  --color-white: #F5F5F5;
+  --color-black: #000000;
+  --color-green: limegreen;
+  --color-black-hover: #111;
+  --color-glow-hover: rgba(50, 205, 50, 0.28);
+  --color-glow-active: rgba(50, 205, 50, 0.5);
+  --color-glow-active-hover: rgba(50, 205, 50, 0.7);
+  --color-button-background: #000000;
+  --color-button-background-hover: rgba(50, 205, 50, 0.28);
+  --color-button-background-active-hover: #111;
+  --color-command-text: #9cff9c;
+
+}
+
 .experience-dialog .mat-mdc-dialog-surface{
   background: transparent;
   box-shadow: none;
@@ -9,7 +24,7 @@
   border-radius:12px;
   border:1px solid rgba(50,205,50,0.25);
   box-shadow:0 0 14px rgba(50,205,50,0.35);
-  color:#F5F5F5;
+  color: #F5F5F5;
   overflow:hidden;
   position:relative;
 }

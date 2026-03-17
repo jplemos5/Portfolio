@@ -2,10 +2,10 @@
   position: relative;
   width: 100% !important;
   margin: 15px 0;
-  background-color: #000;
-  color: #F5F5F5;
+  background-color: var(--color-black);
+  color: var(--color-white);
   border-radius: 10px;
-  border: 1px solid rgba(50,205,50,0.2);
+  border: 1px solid var(--color-button-background-hover);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -16,8 +16,8 @@
 }
 
 .skill-card:hover {
-  border: 1px solid limegreen;
-  box-shadow: 0 10px 25px rgba(50,205,50,0.4);
+  border: 1px solid var(--color-green);
+  box-shadow: 0 10px 25px var(--color-glow-active);
 }
 
 .logo img {
@@ -39,9 +39,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #F5F5F5;
+  color: var(--color-white);
 }
 
 mat-progress-bar {
   width: 100%;
+  border-radius: 10px;
 }

@@ -22,7 +22,6 @@ import emailjs from '@emailjs/browser';
   templateUrl: './contacts.html',
   styleUrls: ['./contacts.css']
 })
-
 export class Contacts {
   unlocked = false;
   inputKey = '';
@@ -33,6 +32,7 @@ export class Contacts {
   hideUnlockBox = false;
   showBinary = false;
   private binaryInterval: any;
+
   userEmail = '';
   subject = '';
   message = '';
@@ -52,6 +52,12 @@ export class Contacts {
 
   constructor(private cd: ChangeDetectorRef) {}
 
+  // ✅ Email validation
+  isValidEmail(email: string): boolean {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+
   verifyKey() {
     if (this.inputKey === this.correctKey && !this.verifying) {
       this.verifying = true;
@@ -65,6 +71,7 @@ export class Contacts {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     const target = 'ACCESS GRANTED';
     let frame = 0;
+
     const animate = () => {
       let result = '';
       for (let i = 0; i < target.length; i++) {
@@ -74,23 +81,29 @@ export class Contacts {
           result += chars[Math.floor(Math.random() * chars.length)];
         }
       }
+
       this.displayText = result;
       this.cd.detectChanges();
       frame += 0.3;
+
       if (frame < target.length + 1) {
         requestAnimationFrame(animate);
       } else {
         this.displayText = target;
         this.cd.detectChanges();
+
         setTimeout(() => {
           this.hideUnlockBox = true;
           this.cd.detectChanges();
+
           setTimeout(() => {
             this.showBinary = true;
             this.startBinaryAnimation();
+
             setTimeout(() => {
               this.binaryFade = true;
               this.cd.detectChanges();
+
               setTimeout(() => {
                 clearInterval(this.binaryInterval);
                 this.unlocked = true;
@@ -103,6 +116,7 @@ export class Contacts {
         }, 400);
       }
     };
+
     animate();
   }
 
@@ -115,14 +129,14 @@ export class Contacts {
       this.binaryText = text;
       this.cd.detectChanges();
     };
+
     generateBinary();
-    this.binaryInterval = setInterval(() => {
-      generateBinary();
-    }, 60);
+    this.binaryInterval = setInterval(generateBinary, 60);
   }
 
   revealContacts() {
     let index = 0;
+
     const revealNext = () => {
       if (index < this.contactLines.length) {
         this.displayedContacts.push(this.contactLines[index]);
@@ -131,10 +145,22 @@ export class Contacts {
         setTimeout(revealNext, 250);
       }
     };
+
     revealNext();
   }
 
+  // ✅ Validated email sending
   async sendEmail() {
+    if (!this.userEmail || !this.subject || !this.message) {
+      this.successMessage = "Please fill in all fields.";
+      return;
+    }
+
+    if (!this.isValidEmail(this.userEmail)) {
+      this.successMessage = "Please enter a valid email address.";
+      return;
+    }
+
     try {
       await emailjs.send(
         'service_nwc2f0s',
@@ -146,6 +172,7 @@ export class Contacts {
         },
         'A5AMTwQ8qs0s0Qu9m'
       );
+
       this.successMessage = "Message transmitted successfully.";
       this.userEmail = '';
       this.subject = '';
@@ -153,6 +180,7 @@ export class Contacts {
       this.cd.detectChanges();
     } catch (error) {
       console.error(error);
+      this.successMessage = "Failed to send message.";
     }
   }
 

@@ -1,30 +1,23 @@
-/* CARD */
-
 .project-card {
   position: relative;
   overflow: hidden;
-  background-color: #000;
-  color: #F5F5F5;
+  background-color: var(--color-black);
+  color: var(--color-white);
   border-radius: 10px;
-  border: 1px solid rgba(50,205,50,0.2);
+  border: 1px solid var(--color-button-background-hover);
   transition: all 0.3s ease;
   padding-bottom: 12px;
 }
 
 .project-card:hover {
-  border: 1px solid limegreen;
-  box-shadow: 0 0 10px rgba(50,205,50,0.5);
+  border: 1px solid var(--color-green);
+  box-shadow: 0 0 10px var(--color-glow-hover);
 }
-
-
-/* IMAGE CONTAINER */
 
 .image-container {
   overflow: hidden;
   position: relative;
 }
-
-/* imagem */
 
 .project-image {
   height: 20vh;
@@ -34,40 +27,29 @@
   transition: transform 0.3s ease;
 }
 
-/* zoom */
-
 .image-container:hover .project-image {
   transform: scale(1.05);
 }
-
-
-/* gradient para legibilidade */
 
 .image-container::after {
   content: "";
   position: absolute;
   inset: 0;
-
   background: linear-gradient(
     to top,
     rgba(0,0,0,0.9) 0%,
     rgba(0,0,0,0.55) 35%,
     rgba(0,0,0,0) 70%
   );
-
   z-index: 1;
 }
-
-
-/* TEXTO SOBRE IMAGEM */
 
 .image-overlay {
   position: absolute;
   bottom: 10px;
   left: 16px;
   right: 16px;
-
-  color: white;
+  color: var(--color-white);
   z-index: 2;
 }
 
@@ -75,15 +57,12 @@
   margin: 0;
   font-weight: 500;
   font-size: 1.2rem;
-  color: #F5F5F5;
+  color: var(--color-white);
 }
-
-
-/* BODY */
 
 .project-body {
   padding: 16px;
-  color: #DDD;
+  color: var(--color-white);
 }
 
 .project-description {
@@ -92,9 +71,6 @@
   font-size: 0.95rem;
 }
 
-
-/* SKILLS TAGS */
-
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -102,53 +78,45 @@
 }
 
 .skill{
-  background: rgba(50,205,50,0.15);
-  border: 1px solid rgba(50,205,50,0.4);
+  background: var(--color-button-background);
+  border: 1px solid var(--color-glow-hover);
   padding: 4px 10px;
   border-radius: 20px;
   font-size: 0.75rem;
-  color: limegreen;
+  color: var(--color-green);
   transition: all 0.2s ease;
 }
 
-/* glow apenas */
 .skill:hover{
-  box-shadow: 0 0 6px rgba(50,205,50,0.8);
-  border-color: limegreen;
+  box-shadow: 0 0 6px var(--color-glow-active-hover);
+  border-color: var(--color-green);
 }
 
 .project-links{
   position:absolute;
   bottom:10px;
   right:10px;
-
   display:flex;
   gap:8px;
-  z-index:3; /* acima do gradient */
+  z-index:3; 
 }
 
 .project-link{
   display:flex;
   align-items:center;
   justify-content:center;
-
   width:32px;
   height:32px;
-
   border-radius:50%;
-
-  background:rgba(0,0,0,0.6);
-  border:1px solid rgba(50,205,50,0.5);
-
-  color:limegreen;
-
+  background:var(--color-button-background-hover);
+  border:1px solid var(--color-green);
+  color:var(--color-green);
   backdrop-filter: blur(4px);
-
   transition: all 0.2s ease;
 }
 
 .project-link:hover{
-  box-shadow:0 0 8px rgba(50,205,50,0.8);
-  border-color:limegreen;
+  box-shadow:0 0 8px var(--color-glow-active-hover);
+  border-color:var(--color-green);
   transform:scale(1.1);
 }
