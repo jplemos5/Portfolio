@@ -1,38 +1,72 @@
 <section id="about" class="section about-section">
-    <div class="about-text-section">
-        <h1 class="about-title">About Me</h1>
-        <h2 class="about-text"> I’m an IT professional with a Master’s in Computer Science, passionate about building solutions and learning new technologies. </h2>
-        <h2 class="about-text"> I enjoy solving problems, working in teams, and turning ideas into real-world projects. </h2>
-        <div class="action-buttons">
-            <a class="action-button" href="João Lemos CV.pdf" target="_blank" rel="noopener noreferrer"> <mat-icon>description</mat-icon> Curriculum Vitae </a>
-            <button class="action-button" (click)="scrollToContacts()"> <mat-icon>contacts</mat-icon> Contacts </button>
-        </div>
+  <div class="about-text-section">
+    <h1 class="about-title">About Me</h1>
+
+    <h2 class="about-text">
+      I’m an IT professional with a Master’s in Computer Science, passionate about building solutions and learning new technologies.
+    </h2>
+
+    <h2 class="about-text">
+      I enjoy solving problems, working in teams, and turning ideas into real-world projects.
+    </h2>
+
+    <div class="action-buttons">
+      <a class="action-button" href="João Lemos CV.pdf" target="_blank" rel="noopener noreferrer">
+        <mat-icon>description</mat-icon> Curriculum Vitae
+      </a>
+
+      <button class="action-button" (click)="scrollToContacts()">
+        <mat-icon>contacts</mat-icon> Contacts
+      </button>
     </div>
-    <div class="about-image-section">
-        <div class="image-swap-container"
-            (mouseenter)="onMouseEnter()"
-            (mouseleave)="onMouseLeave()"
-            (click)="togglePage()">
-            <img [src]="mainImage" alt="Current Image" class="main-image">
-            <img *ngIf="!hoverService.hoverDisabled && hovering"
-                [src]="hoverImage"
-                alt="Hover Image"
-                class="hover-image">
-        </div>
-        <div>
-            <mat-button-toggle-group
-                [(ngModel)]="selectedMode"
-                class="mode-toggle"
-                exclusive
-                aria-label="Mode selection"
-                (change)="onModeChange($event.value)">
-                <mat-button-toggle value="professional">
-                    <mat-icon>work</mat-icon> Professional
-                </mat-button-toggle>
-                <mat-button-toggle value="personal">
-                    <mat-icon>person</mat-icon> Personal
-                </mat-button-toggle>
-            </mat-button-toggle-group>
-        </div>
+  </div>
+
+  <div class="about-image-section">
+    <div
+      class="image-swap-container"
+      (mouseenter)="onMouseEnter()"
+      (mouseleave)="onMouseLeave()"
+      (click)="togglePage()"
+    >
+      <img
+        [src]="
+          previewMode
+            ? (previewMode === 'professional'
+                ? 'Profile/Professional.png'
+                : 'Profile/Personal.png')
+            : mainImage
+        "
+        alt="Profile Image"
+        class="main-image"
+      />
     </div>
+
+    <div>
+      <mat-button-toggle-group
+        [(ngModel)]="selectedMode"
+        class="mode-toggle"
+        exclusive
+        aria-label="Mode selection"
+        (change)="onModeChange($event.value)"
+      >
+        <mat-button-toggle
+          value="professional"
+          (mouseenter)="onButtonHover('professional')"
+          (mouseleave)="onButtonLeave()"
+          [class.preview]="previewMode === 'professional'"
+        >
+          <mat-icon>work</mat-icon> Professional
+        </mat-button-toggle>
+
+        <mat-button-toggle
+          value="personal"
+          (mouseenter)="onButtonHover('personal')"
+          (mouseleave)="onButtonLeave()"
+          [class.preview]="previewMode === 'personal'"
+        >
+          <mat-icon>person</mat-icon> Personal
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+  </div>
 </section>

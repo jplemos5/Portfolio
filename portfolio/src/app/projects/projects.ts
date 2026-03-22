@@ -22,7 +22,7 @@ export class Projects {
       text: "Web application developed for the Bairro de Ideias study center to streamline the student evaluation workflow. The platform simplifies daily assessment processes for teachers and enables faster, more structured feedback to parents regarding student progress and activities. The system is currently private due to security considerations.",
       skillsUsed: ["Python","Flask","HTML", "MySQL"],
       image: "Experiences/Effectum.jpg",
-      links: [{url:"Dissertation_99145.pdf", icon:"open_in_new"}]
+      links: []
     },
     {
       title: "Eiffel Bike Rent WebServices Project",

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { HoverService } from '../hover'; // caminho correto
+import { HoverService } from '../hover';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -25,8 +25,11 @@ import { MatButtonModule } from '@angular/material/button';
 export class About {
   selectedMode: 'professional' | 'personal';
   currentPage: 'professional' | 'personal';
+
+  // NEW: preview mode (used for hover sync)
+  previewMode: 'professional' | 'personal' | null = null;
+
   mainImage!: string;
-  hoverImage!: string;
   hovering = false;
 
   constructor(private router: Router, public hoverService: HoverService) {
@@ -37,27 +40,45 @@ export class About {
 
   setImages() {
     if (this.currentPage === 'professional') {
-      this.mainImage = 'Puto.jpg';   
-      this.hoverImage = 'Puto.jpg';  
+      this.mainImage = 'Profile/Professional.png';
     } else {
-      this.mainImage = 'Puto.jpg';   
-      this.hoverImage = 'Puto.jpg';  
+      this.mainImage = 'Profile/Personal.png';
     }
   }
 
+  // IMAGE HOVER
   onMouseEnter() {
     if (this.hoverService.hoverDisabled) return;
+
     this.hovering = true;
+    this.previewMode = this.currentPage === 'professional' ? 'personal' : 'professional';
   }
 
   onMouseLeave() {
     this.hovering = false;
-    this.hoverService.hoverDisabled = false;  
+    this.previewMode = null;
+    this.hoverService.hoverDisabled = false;
+  }
+
+  // BUTTON HOVER
+  onButtonHover(mode: 'professional' | 'personal') {
+    if (this.hoverService.hoverDisabled) return;
+
+    if (mode !== this.currentPage) {
+      this.previewMode = mode;
+      this.hovering = true;
+    }
+  }
+
+  onButtonLeave() {
+    this.previewMode = null;
+    this.hovering = false;
   }
 
   togglePage() {
     this.hoverService.hoverDisabled = true;
     this.hovering = false;
+    this.previewMode = null;
 
     this.currentPage = this.currentPage === 'professional' ? 'personal' : 'professional';
     this.selectedMode = this.currentPage;
@@ -70,6 +91,7 @@ export class About {
     if (value !== this.currentPage) {
       this.hoverService.hoverDisabled = true;
       this.hovering = false;
+      this.previewMode = null;
 
       this.currentPage = value;
       this.selectedMode = value;
