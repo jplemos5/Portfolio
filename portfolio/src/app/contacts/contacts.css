@@ -12,11 +12,12 @@ body, p, h2, h3, h4, h6, span, button {
   border: 1px solid var(--color-glow-hover);
   padding: 30px;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .contacts-card:hover {
-  border: 1px solid  var(--color-green);
-  box-shadow: 0 0 15px  var(--color-glow-hover);
+  border: 1px solid var(--color-green);
+  box-shadow: 0 0 15px var(--color-glow-hover);
 }
 
 .contacts-content.locked {
@@ -26,11 +27,11 @@ body, p, h2, h3, h4, h6, span, button {
 
 .contacts-content {
   font-family: monospace;
-  color:  var(--color-command-text);
+  color: var(--color-command-text);
 }
 
 .contacts-content h2 {
-  color:  var(--color-green);
+  color: var(--color-green);
   margin-bottom: 25px;
 }
 
@@ -41,7 +42,7 @@ body, p, h2, h3, h4, h6, span, button {
 .contact-button {
   border-radius: 999px;
   padding: 8px 18px;
-  color:  var(--color-green);
+  color: var(--color-green);
   background-color: var(--color-button-background);
   border: 1px solid var(--color-glow-hover);
   transition: all 0.3s ease;
@@ -51,19 +52,19 @@ body, p, h2, h3, h4, h6, span, button {
 
 .contact-button:hover {
   background-color: var(--color-button-background-hover);
-  border: 1px solid  var(--color-green);
-  box-shadow: 0 0 6px 1px  var(--color-green);
+  border: 1px solid var(--color-green);
+  box-shadow: 0 0 6px 1px var(--color-green);
 }
 
 .contacts-title {
   font-size: 90px;
-  color:  var(--color-white);
+  color: var(--color-white);
   margin-bottom: 40px;
 }
 
 .contacts-subtitle {
   font-size: 17.5px;
-  color:  var(--color-white);
+  color: var(--color-white);
   margin-bottom: 25px;
   font-weight: 450;
 }
@@ -74,18 +75,31 @@ body, p, h2, h3, h4, h6, span, button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(6px);
   border-radius: 12px;
   overflow: hidden;
+  /* garante que fica dentro do card em mobile */
+  padding: 20px;
 }
 
 .unlock-box {
   position: relative;
   z-index: 2;
   text-align: center;
-  color:  var(--color-white);
+  color: var(--color-white);
   width: 350px;
+  max-width: 100%;
+}
+
+.unlock-box h3 {
+  margin-bottom: 8px;
+}
+
+.unlock-box p {
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .decrypt-text {
@@ -93,33 +107,41 @@ body, p, h2, h3, h4, h6, span, button {
   letter-spacing: 2px;
   margin-top: 15px;
   font-size: 18px;
-  color:  var(--color-green);
+  color: var(--color-green);
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
 }
 
 /* BINARY EFFECT */
-.binary-layer{
-  text-shadow:0 0 6px  var(--color-green);
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  font-family:monospace;
-  font-size:14px;
-  line-height:14px;
+.binary-layer {
+  text-shadow: 0 0 6px var(--color-green);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 14px;
   color: var(--color-green);
-  opacity:0.6;
-  pointer-events:none;
-  overflow:hidden;
+  opacity: 0.6;
+  pointer-events: none;
+  overflow: hidden;
 }
 
-.binary-layer pre{
-  margin:0;
-  width:100%;
-  height:100%;
-  white-space:normal;
-  word-break:break-all;
-  overflow:hidden;
+.binary-layer pre {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  white-space: normal;
+  word-break: break-all;
+  overflow: hidden;
 }
 
 .binary-fade {
@@ -149,7 +171,7 @@ body, p, h2, h3, h4, h6, span, button {
 }
 
 .email-form h2 {
-  color:  var(--color-green);
+  color: var(--color-green);
   margin-bottom: 5px;
 }
 
@@ -163,15 +185,113 @@ body, p, h2, h3, h4, h6, span, button {
   width: 100%;
 }
 
-.contact-icon{
-  margin-right:8px;
+.contact-icon {
+  margin-right: 8px;
   color: var(--color-green);
-  font-size:16px;
+  font-size: 16px;
 }
 
-/* --------------------------------------- */
-
-.contacts-section{
-  width: 77.5vw; 
+.contacts-section {
+  width: 77.5vw;
   margin: auto;
+}
+
+/* ── Tablet (≤ 900px) ── */
+@media (max-width: 900px) {
+  .contacts-section {
+    width: 90vw;
+  }
+
+  .contacts-title {
+    font-size: 60px;
+    margin-bottom: 28px;
+  }
+
+  .contacts-subtitle {
+    font-size: 16px;
+  }
+
+  .contacts-container {
+    gap: 30px;
+  }
+}
+
+/* ── Mobile (≤ 600px) ── */
+@media (max-width: 600px) {
+  .contacts-section {
+    width: 92vw;
+  }
+
+  .contacts-title {
+    font-size: 44px;
+    margin-bottom: 20px;
+  }
+
+  .contacts-subtitle {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+
+  .contacts-card {
+    padding: 20px 16px;
+    min-height: auto;
+  }
+
+  /* Empilha as colunas verticalmente */
+  .contacts-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /* Overlay do unlock ocupa o card inteiro sem overflow */
+  .unlock-overlay {
+    padding: 16px;
+    align-items: center;
+  }
+
+  .unlock-box {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .unlock-box h3 {
+    font-size: 16px;
+  }
+
+  .unlock-box p {
+    font-size: 13px;
+  }
+
+  .decrypt-text {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+
+  .contact-button {
+    padding: 6px 14px;
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  /* mat-form-field do unlock key a 100% */
+  .unlock-box mat-form-field {
+    width: 100% !important;
+  }
+}
+
+/* ── Mobile muito pequeno (≤ 380px) ── */
+@media (max-width: 380px) {
+  .contacts-title {
+    font-size: 36px;
+  }
+
+  .unlock-overlay {
+    padding: 12px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 }

@@ -1,21 +1,21 @@
-.projects-section{
-    width: 77.5vw;
-    margin: auto;
-    margin-bottom: 150px;
+.projects-section {
+  width: 77.5vw;
+  margin: auto;
+  margin-bottom: 150px;
 }
 
-.projects-title{
-    font-size: 90px;
-    color:var(--color-white);
-    margin-bottom: 40px;
+.projects-title {
+  font-size: 90px;
+  color: var(--color-white);
+  margin-bottom: 40px;
 }
 
-.projects-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    width: 92%; 
-    margin: auto;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  width: 92%;
+  margin: auto;
 }
 
 .contacts-subtitle {
@@ -23,4 +23,45 @@
   color: var(--color-white);
   margin-bottom: 25px;
   font-weight: 450;
+}
+
+/* ── Tablet (≤ 900px) ── */
+@media (max-width: 900px) {
+  .projects-section {
+    width: 90vw;
+    margin-bottom: 80px;
+  }
+
+  .projects-title {
+    font-size: 60px;
+    margin-bottom: 28px;
+  }
+
+  .projects-grid {
+    gap: 24px;
+    width: 100%;
+  }
+}
+
+/* ── Mobile (≤ 600px) — 1 coluna ── */
+@media (max-width: 600px) {
+  .projects-section {
+    width: 92vw;
+    margin-bottom: 60px;
+  }
+
+  .projects-title {
+    font-size: 44px;
+    margin-bottom: 20px;
+  }
+
+  .contacts-subtitle {
+    font-size: 15px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+  }
 }

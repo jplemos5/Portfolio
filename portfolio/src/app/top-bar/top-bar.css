@@ -1,16 +1,25 @@
-.topbar {
-  position: fixed;
-  top: 12px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 40px;
-  background: transparent;
-  z-index: 10;
+/* RESET IMPORTANTE */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
+.topbar { 
+  position: fixed; 
+  top: 12px; 
+  left: 0; 
+  width: 100%; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 10px 40px; 
+  background: 
+  transparent; 
+  z-index: 10; 
+} 
+
+/* Layout */
 .left {
   display: flex;
   flex-direction: column;
@@ -18,13 +27,13 @@
 
 .name {
   font-weight: 500;
-  color: var(--color-white);
+  color: white;
 }
 
 .role {
   font-size: 12px;
   opacity: 0.6;
-  color: var(--color-white);
+  color: white;
 }
 
 .center {
@@ -33,70 +42,134 @@
   transform: translateX(-50%);
 }
 
-.pill {
-  display: flex;
-  gap: 10px;
-  padding: 6px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(10px);
-  border: 1px solid transparent;
-  border-image: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.25),
-    rgba(255, 255, 255, 0)
-  ) 1;
-  position: relative;
+.pill { 
+  display: flex; 
+  gap: 10px; 
+  padding: 6px; 
+  border-radius: 999px; 
+  background: rgba(255, 255, 255, 0.06); 
+  backdrop-filter: blur(10px); 
+  border: 1px solid transparent; 
+  border-image: linear-gradient( 90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0) ) 1;
+  position: relative; 
 }
 
+/* Botões */
 .pill button {
   position: relative;
   z-index: 2;
-  color: var(--color-white);
+  color: white;
   background-color: transparent;
-  border: 1px solid transparent; 
+  border: 1px solid transparent;
   padding: 8px 18px;
   border-radius: 999px;
   cursor: pointer;
-  transition: all;
+  transition: all 0.2s ease;
 }
 
-.pill button:not(.active):hover {
-  background-color: var(--color-button-background-hover);
-  color: var(--color-green);
-  border-color: var(--color-green);
-  box-shadow: 0 0 5px 1px var(--color-green);
+.pill button:not(.active):hover { 
+  background-color: var(--color-button-background-hover); 
+  color: var(--color-green); 
+  border-color: var(--color-green); 
+  box-shadow: 0 0 5px 1px var(--color-green); 
 }
 
-.pill button.active {
-  background-color: var(--color-button-background-hover);
-  color: var(--color-green);
-  border-color: var(--color-green);
-  box-shadow: 0 0 6px 1px var(--color-glow-active);
-}
+.pill button.active { background-color: var(--color-button-background-hover); color: var(--color-green); border-color: var(--color-green); box-shadow: 0 0 6px 1px var(--color-glow-active); }
 
-.pill button.active:hover {
-  background-color: var(--color-glow-active-hover);
-}
+.pill button.active:hover { background-color: var(--color-glow-active-hover); }
 
-.pill button::after {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%) translateY(-4px); 
-  width: 20px;
-  height: 2px;
-  background-color: var(--color-green);
-  border-radius: 3px 3px 0 0;
-  box-shadow: 0 0 6px 2px var(--color-glow-active);
-  opacity: 0; 
-  transition: all 0.1s ease;
-  z-index: 3;
-}
+/* Indicador */
+.pill button::after { content: ''; position: absolute; top: -10px; left: 50%; transform: translateX(-50%) translateY(-4px); width: 20px; height: 2px; background-color: var(--color-green); border-radius: 3px 3px 0 0; box-shadow: 0 0 6px 2px var(--color-glow-active); opacity: 0; transition: all 0.1s ease; z-index: 3; }
 
 .pill button.active::after {
-  transform: translateX(-50%) translateY(0); 
-  opacity: 1; 
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* ── Tablet ── */
+@media (max-width: 768px) {
+ .topbar { 
+  top: 0; 
+  padding: 8px 20px 10px 20px;
+  flex-direction: column; 
+  align-items: center; gap: 6px; 
+  background: rgba(0, 0, 0, 0.82); 
+  backdrop-filter: blur(14px); 
+  -webkit-backdrop-filter: blur(14px); 
+  border-bottom: 1px solid rgba(50, 205, 50, 0.15); 
+}
+
+  .left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .center {
+    position: static;
+    transform: none;
+  }
+
+  .pill {
+    gap: 4px;
+    padding: 4px;
+    /* 🔥 fallback fake glass */
+    background: rgba(20, 20, 20, 0.55);
+    /* remove blur (evita bugs) */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .pill button {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  .pill button.active {
+    background: rgba(20, 20, 20, 0.65) !important;
+  }
+
+  .pill button::after {
+    display: none;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .topbar {
+    padding: 4px 12px;
+    gap: 4px;
+  }
+
+  .left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .role {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+
+  .pill {
+    gap: 2px;
+    padding: 3px;
+    background: rgba(20, 20, 20, 0.65);
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .pill button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .pill button.active {
+    background: rgba(20, 20, 20, 0.65) !important;
+  }
 }

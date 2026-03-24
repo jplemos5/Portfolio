@@ -10,7 +10,7 @@
 .mode-toggle .mat-button-toggle:not(.mat-button-toggle-checked):hover {
   background-color: var(--color-button-background-hover);
   color: var(--color-green);
-  border: 1px solid  var(--color-green);
+  border: 1px solid var(--color-green);
   box-shadow: 0 0 5px 1px var(--color-green);
 }
 
@@ -22,7 +22,7 @@
 
 .mode-toggle .mat-button-toggle.mat-button-toggle-checked:hover {
   background-color: var(--color-black-hover);
-  border: 1px solid  var(--color-green);
+  border: 1px solid var(--color-green);
   box-shadow: 0 0 8px 2px var(--color-glow-active-hover);
 }
 
@@ -32,7 +32,7 @@
 
 .action-buttons {
   display: flex;
-  margin-top: 25px; 
+  margin-top: 25px;
   gap: 15px;
 }
 
@@ -53,7 +53,7 @@
   background-color: var(--color-button-background-hover);
   color: var(--color-green);
   box-shadow: 0 0 5px 1px var(--color-green);
-  border: 1px solid  var(--color-green);
+  border: 1px solid var(--color-green);
 }
 
 .action-button.active {
@@ -63,7 +63,7 @@
 }
 
 .action-button.active:hover {
-  border: 1px solid  var(--color-green);
+  border: 1px solid var(--color-green);
   background-color: var(--color-button-background-active-hover);
   box-shadow: 0 0 8px 2px var(--color-glow-active-hover);
 }
@@ -83,7 +83,7 @@ a {
   cursor: pointer;
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom:10px; 
+  margin-bottom: 10px;
 }
 
 .image-swap-container img {
@@ -107,45 +107,42 @@ a {
   z-index: 2;
 }
 
-
-
-/*        -----------------------------------------        */
-
-.about-section{
-  height: 100vh; 
+/* ── Desktop ── */
+.about-section {
+  height: 100vh;
   margin: auto;
   margin-bottom: 50px;
   margin-top: -30px;
   width: 77.5vw;
-  display: flex; 
+  display: flex;
   align-items: center;
 }
 
-.about-text-section{
-  width: 50%; 
-  max-width: 600px; 
-  display: flex; 
+.about-text-section {
+  width: 50%;
+  max-width: 600px;
+  display: flex;
   flex-direction: column;
 }
 
-.about-title{
-  font-size: 90px; 
-  color: var(--color-white); 
+.about-title {
+  font-size: 90px;
+  color: var(--color-white);
   margin-bottom: 45px;
 }
 
-.about-text{
-  color: var(--color-white); 
-  font-weight: 400; 
+.about-text {
+  color: var(--color-white);
+  font-weight: 400;
   line-height: 1.6;
 }
 
-.about-image-section{
-  width:50%; 
-  margin-left:auto; 
-  display:flex; 
-  flex-direction:column; 
-  align-items:center;
+.about-image-section {
+  width: 50%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Preview (hover sync) */
@@ -154,4 +151,95 @@ a {
   color: var(--color-green);
   border: 1px solid var(--color-green);
   box-shadow: 0 0 5px 1px var(--color-green);
+}
+
+/* ── Tablet (≤ 900px) ── */
+@media (max-width: 900px) {
+  .about-section {
+    width: 90vw;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding-top compensa a topbar em dois níveis (~90px) + folga */
+    margin-top: 0;
+    margin-bottom: 60px;
+    gap: 32px;
+  }
+
+  .about-text-section {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-title {
+    font-size: 64px;
+    margin-bottom: 28px;
+  }
+
+  .about-image-section {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* imagem mostra a pessoa inteira — altura proporcional à largura */
+  .image-swap-container {
+    height: auto;
+    max-height: 60vh;
+    width: 100%;
+  }
+
+  .image-swap-container img {
+    height: 100%;
+    max-height: 60vh;
+    object-position: top center;
+  }
+}
+
+/* ── Mobile (≤ 600px) ── */
+@media (max-width: 600px) {
+  .about-section {
+    width: 92vw;
+    /* topbar em mobile ocupa ~90px (nome + pill) */
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .about-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    font-size: 15px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .action-button {
+    justify-content: center;
+  }
+
+  .image-swap-container {
+    max-height: 55vh;
+  }
+
+  .image-swap-container img {
+    max-height: 55vh;
+  }
+}
+
+/* ── Mobile pequeno (≤ 480px) ── */
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 40px;
+  }
+
+  .mode-toggle .mat-button-toggle {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
 }

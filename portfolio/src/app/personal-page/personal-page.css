@@ -11,3 +11,43 @@
 .page-content {
   padding-top: 60px;
 }
+
+.spacer {
+  width: 100%;
+  height: 75px; /* default for desktop */
+}
+
+/* ── Tablet (≤ 768px) ── */
+@media (max-width: 768px) {
+  .work-title {
+    font-size: 44px;
+    margin-top: 90px;
+    padding-bottom: 60px;
+  }
+
+  .page-content {
+    padding-top: 100px;
+  }
+
+  .spacer {
+    height: 95px;
+  }
+}
+
+/* ── Mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+  .work-title {
+    font-size: 32px;
+    margin-top: 80px;
+    padding-bottom: 40px;
+    letter-spacing: 1px;
+  }
+
+  .page-content {
+    padding-top: 120px;
+  }
+
+  .spacer {
+    height: 60px;
+  }
+}

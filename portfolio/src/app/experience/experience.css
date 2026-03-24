@@ -3,9 +3,9 @@
 }
 
 .experience-section {
-  width: 77.5vw; 
-  margin: auto; 
-  margin-bottom:150px;
+  width: 77.5vw;
+  margin: auto;
+  margin-bottom: 150px;
 }
 
 .timeline {
@@ -105,8 +105,8 @@
 }
 
 .experience-title {
-  font-size: 90px; 
-  color:var(--color-white); 
+  font-size: 90px;
+  color: var(--color-white);
   margin-bottom: 45px;
 }
 
@@ -117,25 +117,94 @@
   font-weight: 450;
 }
 
-@media screen and (max-width: 600px) {
-  .timeline::after {
-    left: 30px;
+/* ── Tablet (≤ 900px) — colapsa para 1 coluna ── */
+@media (max-width: 900px) {
+  .experience-section {
+    width: 90vw;
+    margin-bottom: 80px;
   }
+
+  .experience-title {
+    font-size: 60px;
+    margin-bottom: 28px;
+  }
+
+  .experience-subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .timeline {
+    max-width: 100%;
+  }
+
+  /* linha da timeline passa para a esquerda */
+  .timeline::after {
+    left: 24px;
+  }
+
   .container {
     width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+    padding-left: 64px;
+    padding-right: 20px;
   }
+
+  /* seta aponta para a direita em todos os containers */
   .container::before {
-    left: 60px;
-    border: medium solid var(--color-white);
+    left: 50px;
+    right: auto;
     border-width: 10px 10px 10px 0;
-    border-color: transparent var(--color-black-hover) transparent transparent;
+    border-color: transparent var(--color-glow-hover) transparent transparent;
   }
-  .left::after, .right::after {
-    left: 15px;
+
+  /* bolinha da timeline */
+  .left::after,
+  .right::after {
+    left: 13px;
+    right: auto;
   }
+
   .right {
-    left: 0%;
+    left: 0;
+  }
+}
+
+/* ── Mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+  .experience-section {
+    width: 92vw;
+    margin-bottom: 60px;
+  }
+
+  .experience-title {
+    font-size: 44px;
+    margin-bottom: 20px;
+  }
+
+  .experience-subtitle {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  .timeline::after {
+    left: 16px;
+  }
+
+  .container {
+    padding-left: 48px;
+    padding-right: 12px;
+  }
+
+  .container::before {
+    left: 34px;
+  }
+
+  .left::after,
+  .right::after {
+    left: 5px;
+  }
+
+  .content {
+    padding: 14px 16px;
   }
 }
