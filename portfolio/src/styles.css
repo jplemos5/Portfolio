@@ -12,6 +12,16 @@
   --color-command-text: #9cff9c;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background: #0d0d0d;
+  z-index: 3;
+}
+
 .experience-dialog .mat-mdc-dialog-surface {
   background: transparent;
   box-shadow: none;
