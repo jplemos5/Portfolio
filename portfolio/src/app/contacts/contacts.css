@@ -13,6 +13,9 @@ body, p, h2, h3, h4, h6, span, button {
   padding: 30px;
   transition: all 0.3s ease;
   overflow: hidden;
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contacts-card:hover {
@@ -202,6 +205,11 @@ body, p, h2, h3, h4, h6, span, button {
     width: 90vw;
   }
 
+  .contacts-card {
+    width: 100%;
+    padding: 18px;
+  }
+
   .contacts-title {
     font-size: 60px;
     margin-bottom: 28px;
@@ -222,6 +230,12 @@ body, p, h2, h3, h4, h6, span, button {
     width: 92vw;
   }
 
+  .contacts-card {
+    width: 100%;
+    padding: 14px;
+    min-height: 320px;
+  }
+
   .contacts-title {
     font-size: 44px;
     margin-bottom: 20px;
@@ -233,15 +247,36 @@ body, p, h2, h3, h4, h6, span, button {
     margin-bottom: 18px;
   }
 
-  .contacts-card {
-    padding: 20px 16px;
-    min-height: auto;
-  }
-
-  /* Empilha as colunas verticalmente */
+  /* Empilha as colunas verticalmente e centra */
   .contacts-container {
     flex-direction: column;
     gap: 24px;
+    align-items: center;
+  }
+
+  .contacts-content {
+    text-align: center;
+    width: 100%;
+  }
+
+  .contacts-content h2 {
+    text-align: center;
+  }
+
+  .external-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .email-form {
+    width: 100%;
+    align-items: center;
+  }
+
+  .email-form h2 {
+    text-align: center;
   }
 
   /* Overlay do unlock ocupa o card inteiro sem overflow */
